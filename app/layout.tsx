@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Shippori_Mincho, Zen_Kaku_Gothic_New, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
+import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
 const shippori = Shippori_Mincho({
@@ -40,6 +42,13 @@ export default function RootLayout({
         className={`${shippori.variable} ${zenkaku.variable} ${jetbrains.variable} font-sans`}
       >
         {children}
+        <SiteFooter />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4630812027939211"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

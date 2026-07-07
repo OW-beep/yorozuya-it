@@ -146,10 +146,6 @@ export default function Home() {
         </section>
       )}
 
-      <footer className="px-[6vw] py-9 flex justify-between text-xs text-ink-soft border-t border-ink/10">
-        <span>© 2026 よろずやIT</span>
-        <span className="font-mono">Built with Next.js on Vercel</span>
-      </footer>
     </main>
   );
 }
