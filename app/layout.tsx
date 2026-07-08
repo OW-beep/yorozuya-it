@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Shippori_Mincho, Zen_Kaku_Gothic_New, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
 const shippori = Shippori_Mincho({
@@ -25,10 +26,37 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_DESCRIPTION =
+  "エラー、アプリの使い方、聞きなれない専門用語まで。何でも屋のように、ITのあらゆる「わからない」を取り揃えています。";
+
 export const metadata: Metadata = {
-  title: "よろずやIT | ITの困った、ぜんぶここに。",
-  description:
-    "エラー、アプリの使い方、聞きなれない専門用語まで。何でも屋のように、ITのあらゆる「わからない」を取り揃えています。",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | ITの困った、ぜんぶここに。`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} | ITの困った、ぜんぶここに。`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary",
+    title: `${SITE_NAME} | ITの困った、ぜんぶここに。`,
+    description: SITE_DESCRIPTION,
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -41,6 +69,10 @@ export default function RootLayout({
       <body
         className={`${shippori.variable} ${zenkaku.variable} ${jetbrains.variable} font-sans`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         {children}
         <SiteFooter />
         <Script

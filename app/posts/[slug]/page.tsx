@@ -1,5 +1,6 @@
 import { getAllPostSlugs, getPostData, getRelatedPosts } from "@/lib/posts";
 import { getCategoryByLabel } from "@/lib/categories";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PostCard from "@/components/PostCard";
@@ -15,9 +16,26 @@ export async function generateMetadata({
 }) {
   try {
     const post = await getPostData(params.slug);
-    return { title: `${post.title} | よろずやIT` };
+    const url = `${SITE_URL}/posts/${params.slug}`;
+    return {
+      title: post.title,
+      description: post.excerpt,
+      alternates: { canonical: url },
+      openGraph: {
+        type: "article",
+        title: post.title,
+        description: post.excerpt,
+        url,
+        publishedTime: post.date,
+      },
+      twitter: {
+        card: "summary",
+        title: post.title,
+        description: post.excerpt,
+      },
+    };
   } catch {
-    return { title: "記事が見つかりません | よろずやIT" };
+    return { title: "記事が見つかりません" };
   }
 }
 
@@ -36,8 +54,24 @@ export default async function PostPage({
   const category = getCategoryByLabel(post!.category);
   const related = getRelatedPosts(post!.category, post!.slug, 3);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post!.title,
+    description: post!.excerpt,
+    datePublished: post!.date,
+    dateModified: post!.date,
+    author: { "@type": "Organization", name: SITE_NAME },
+    publisher: { "@type": "Organization", name: SITE_NAME },
+    mainEntityOfPage: `${SITE_URL}/posts/${post!.slug}`,
+  };
+
   return (
     <main className="max-w-[720px] mx-auto px-[6vw] py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <Breadcrumbs
         items={[
           { label: "よろずやIT", href: "/" },

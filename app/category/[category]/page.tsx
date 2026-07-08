@@ -14,8 +14,11 @@ export async function generateMetadata({
   params: { category: string };
 }) {
   const category = getCategoryBySlug(params.category);
-  if (!category) return { title: "カテゴリーが見つかりません | よろずやIT" };
-  return { title: `${category.label}の記事一覧 | よろずやIT` };
+  if (!category) return { title: "カテゴリーが見つかりません" };
+  return {
+    title: `${category.label}の記事一覧`,
+    description: category.desc,
+  };
 }
 
 export default function CategoryPage({

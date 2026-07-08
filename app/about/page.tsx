@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "運営者情報 | よろずやIT",
+  title: "運営者情報",
 };
 
 export default function AboutPage() {
@@ -40,7 +40,7 @@ export default function AboutPage() {
             記事内容の誤りのご指摘、ご質問、掲載依頼等は下記メールアドレスまでご連絡ください。
           </p>
           <p className="mt-2 font-mono text-ink-soft">
-            info@yorozuya-it.jp (仮設定・実際のアドレスに差し替えてください)
+            yorozuyait.info@gmail.com
           </p>
         </section>
 

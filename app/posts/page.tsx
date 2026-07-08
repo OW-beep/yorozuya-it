@@ -5,7 +5,7 @@ import PostCard from "@/components/PostCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-  title: "記事一覧 | よろずやIT",
+  title: "記事一覧",
 };
 
 export default function PostsPage() {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "プライバシーポリシー | よろずやIT",
+  title: "プライバシーポリシー",
 };
 
 export default function PrivacyPage() {
