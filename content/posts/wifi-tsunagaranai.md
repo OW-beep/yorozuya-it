@@ -3,6 +3,7 @@ title: "Wi-Fiに繋がらない時に確認すべき5つのこと"
 category: "PC・スマホ"
 date: "2026-07-09"
 excerpt: "「圏外」でも「未接続」でもないのに繋がらない。よくある原因と、直す順番をまとめました。"
+featured: true
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

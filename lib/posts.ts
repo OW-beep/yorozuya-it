@@ -12,6 +12,7 @@ export type PostMeta = {
   category: string;
   date: string;
   excerpt: string;
+  featured: boolean;
 };
 
 export function getSortedPostsData(): PostMeta[] {
@@ -33,10 +34,30 @@ export function getSortedPostsData(): PostMeta[] {
       category: matterResult.data.category as string,
       date: matterResult.data.date as string,
       excerpt: matterResult.data.excerpt as string,
+      featured: Boolean(matterResult.data.featured),
     };
   });
 
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export function getPostsByCategory(categoryLabel: string): PostMeta[] {
+  return getSortedPostsData().filter((p) => p.category === categoryLabel);
+}
+
+export function getFeaturedPosts(limit?: number): PostMeta[] {
+  const featured = getSortedPostsData().filter((p) => p.featured);
+  return limit ? featured.slice(0, limit) : featured;
+}
+
+export function getRelatedPosts(
+  categoryLabel: string,
+  excludeSlug: string,
+  limit = 3
+): PostMeta[] {
+  return getSortedPostsData()
+    .filter((p) => p.category === categoryLabel && p.slug !== excludeSlug)
+    .slice(0, limit);
 }
 
 export function getAllPostSlugs() {
@@ -66,5 +87,6 @@ export async function getPostData(slug: string) {
     category: matterResult.data.category as string,
     date: matterResult.data.date as string,
     excerpt: matterResult.data.excerpt as string,
+    featured: Boolean(matterResult.data.featured),
   };
 }

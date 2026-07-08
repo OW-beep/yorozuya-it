@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { getSortedPostsData } from "@/lib/posts";
+import { CATEGORIES } from "@/lib/categories";
+import PostCard from "@/components/PostCard";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "記事一覧 | よろずやIT",
@@ -9,29 +12,26 @@ export default function PostsPage() {
   const posts = getSortedPostsData();
 
   return (
-    <main className="max-w-[900px] mx-auto px-[6vw] py-16">
-      <div className="mb-10">
-        <Link href="/" className="text-xs text-ink-soft font-mono">
-          ← よろずやIT
-        </Link>
-        <h1 className="font-serif text-3xl font-bold mt-4">記事一覧</h1>
+    <main className="max-w-[1000px] mx-auto px-[6vw] py-16">
+      <Breadcrumbs items={[{ label: "よろずやIT", href: "/" }, { label: "記事一覧" }]} />
+
+      <h1 className="font-serif text-3xl font-bold mb-6">記事一覧</h1>
+
+      <div className="flex flex-wrap gap-2 mb-10">
+        {CATEGORIES.map((cat) => (
+          <Link
+            key={cat.slug}
+            href={`/category/${cat.slug}`}
+            className="text-xs font-mono border border-ink/15 px-3 py-1.5 hover:bg-washi-warm transition-colors"
+          >
+            {cat.label}
+          </Link>
+        ))}
       </div>
 
-      <div className="flex flex-col divide-y divide-ink/10 border-t border-b border-ink/10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/posts/${post.slug}`}
-            className="py-6 flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6"
-          >
-            <span className="text-xs text-yamabuki-deep font-mono whitespace-nowrap">
-              {post.category}
-            </span>
-            <div>
-              <h2 className="font-serif text-lg mb-1">{post.title}</h2>
-              <p className="text-sm text-ink-soft">{post.excerpt}</p>
-            </div>
-          </Link>
+          <PostCard key={post.slug} post={post} />
         ))}
         {posts.length === 0 && (
           <p className="py-10 text-sm text-ink-soft">

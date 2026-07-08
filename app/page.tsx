@@ -1,32 +1,12 @@
 import Link from "next/link";
-import { getSortedPostsData } from "@/lib/posts";
-
-const categories = [
-  {
-    index: "01",
-    title: "PC・スマホの\n操作とエラー",
-    desc: "「表示されない」「動かない」を今すぐ解決。",
-  },
-  {
-    index: "02",
-    title: "アプリ・ソフトの\n使い方",
-    desc: "ExcelからZoomまで、迷わず使いこなす。",
-  },
-  {
-    index: "03",
-    title: "IT用語辞典",
-    desc: "聞いたことはあるけど説明できない言葉を。",
-  },
-  {
-    index: "04",
-    title: "プログラミング\n入門",
-    desc: "はじめの一歩を、専門用語なしで。",
-  },
-];
+import { getSortedPostsData, getFeaturedPosts } from "@/lib/posts";
+import { CATEGORIES } from "@/lib/categories";
+import PostCard from "@/components/PostCard";
 
 export default function Home() {
   const posts = getSortedPostsData();
-  const latest = posts[0];
+  const latest = posts.slice(0, 3);
+  const featured = getFeaturedPosts(4);
 
   return (
     <main>
@@ -57,20 +37,21 @@ export default function Home() {
                 href="/posts"
                 className="bg-yamabuki text-indigo-deep font-bold px-6 py-3 rounded text-sm tracking-wide"
               >
-                お店を覗く
+                記事一覧を覗く
               </Link>
-              <span className="text-xs text-washi/70">毎日新入荷 →</span>
+              <a href="#latest" className="text-xs text-washi/70 hover:text-washi">
+                新着記事へ →
+              </a>
             </div>
           </div>
 
-          <div
-            className="flex justify-center md:justify-end items-end h-36 md:h-[300px] gap-1.5 pr-1"
-            aria-hidden="true"
-          >
-            {["操作", "IT", "用語", "入門"].map((char, i) => (
-              <div
-                key={char}
-                className={`w-[62px] h-28 md:h-60 border-l border-r flex items-center justify-center animate-sway ${
+          <div className="flex justify-center md:justify-end items-end h-36 md:h-[300px] gap-1.5 pr-1">
+            {CATEGORIES.map((cat, i) => (
+              <Link
+                key={cat.slug}
+                href={`/category/${cat.slug}`}
+                aria-label={`${cat.label}の記事一覧へ`}
+                className={`w-[62px] h-28 md:h-60 border-l border-r flex items-center justify-center animate-sway hover:opacity-80 transition-opacity ${
                   i === 1
                     ? "bg-yamabuki/10 border-yamabuki/30"
                     : "bg-washi/[0.06] border-washi/20"
@@ -82,70 +63,79 @@ export default function Home() {
                     i === 1 ? "text-yamabuki font-mono text-lg" : "text-washi/50"
                   }`}
                 >
-                  {char}
+                  {cat.short}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
+      {/* INTRO */}
+      <section className="px-[6vw] pt-14 pb-2 max-w-[1180px] mx-auto">
+        <p className="text-sm leading-loose text-ink-soft max-w-[68ch]">
+          「よろずやIT」は、パソコン・スマホの操作やエラー、アプリの使い方、聞きなれないIT用語、プログラミングの基礎を、専門用語を使わずに解説するサイトです。困ったときに、いつでも気軽に立ち寄ってください。
+        </p>
+      </section>
+
       {/* CATEGORIES */}
-      <section className="px-[6vw] py-16 max-w-[1180px] mx-auto">
+      <section className="px-[6vw] py-14 max-w-[1180px] mx-auto">
         <div className="flex justify-between items-baseline mb-8 border-b border-ink/10 pb-4">
           <h2 className="font-serif text-2xl font-bold">4つの暖簾</h2>
           <span className="text-xs text-ink-soft font-mono">04 STALLS</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ink/10 border border-ink/10">
-          {categories.map((cat) => (
-            <div
-              key={cat.index}
+          {CATEGORIES.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/category/${cat.slug}`}
               className="bg-washi hover:bg-washi-warm transition-colors px-5 py-7"
             >
               <span className="text-xs text-yamabuki-deep mb-3.5 block font-mono">
-                {cat.index}
+                {cat.label}
               </span>
-              <h3 className="font-serif text-lg mb-2 leading-snug whitespace-pre-line">
-                {cat.title}
+              <h3 className="font-serif text-lg mb-2 leading-snug">
+                {cat.desc}
               </h3>
-              <p className="text-sm text-ink-soft leading-relaxed">{cat.desc}</p>
-            </div>
+              <span className="text-xs text-yamabuki-deep">一覧を見る →</span>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* LATEST POST */}
-      {latest && (
-        <section className="bg-washi-warm px-[6vw] py-16">
+      {/* LATEST POSTS */}
+      {latest.length > 0 && (
+        <section id="latest" className="bg-washi-warm px-[6vw] py-14 scroll-mt-6">
           <div className="max-w-[1180px] mx-auto">
             <div className="flex justify-between items-baseline mb-6">
-              <h2 className="font-serif text-2xl font-bold">本日の入荷</h2>
-              <span className="text-xs text-ink-soft font-mono">NEW ARRIVAL</span>
+              <h2 className="font-serif text-2xl font-bold">新着記事</h2>
+              <Link href="/posts" className="text-xs text-ink-soft font-mono hover:text-ink">
+                すべて見る →
+              </Link>
             </div>
-            <Link
-              href={`/posts/${latest.slug}`}
-              className="block bg-washi border border-ink/10 p-9 grid grid-cols-1 md:grid-cols-[100px_1fr] gap-7"
-            >
-              <div className="text-xs text-ink-soft leading-relaxed">
-                <span className="text-2xl text-yamabuki-deep block mb-1">01</span>
-                {latest.category}
-              </div>
-              <div>
-                <h3 className="font-serif text-xl mb-2.5 leading-snug">
-                  {latest.title}
-                </h3>
-                <p className="text-sm text-ink-soft leading-loose max-w-[60ch]">
-                  {latest.excerpt}
-                </p>
-                <div className="mt-3.5 text-xs text-yamabuki-deep">
-                  3分で読める →
-                </div>
-              </div>
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {latest.map((post) => (
+                <PostCard key={post.slug} post={post} />
+              ))}
+            </div>
           </div>
         </section>
       )}
 
+      {/* FEATURED POSTS */}
+      {featured.length > 0 && (
+        <section className="px-[6vw] py-14 max-w-[1180px] mx-auto">
+          <div className="flex justify-between items-baseline mb-6">
+            <h2 className="font-serif text-2xl font-bold">おすすめ記事</h2>
+            <span className="text-xs text-ink-soft font-mono">EDITOR&apos;S PICK</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {featured.map((post) => (
+              <PostCard key={post.slug} post={post} variant="featured" />
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }

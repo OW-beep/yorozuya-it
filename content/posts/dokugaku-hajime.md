@@ -3,6 +3,7 @@ title: "プログラミングを独学で学ぶ時の最初の一歩"
 category: "プログラミング"
 date: "2026-07-26"
 excerpt: "何から始めればいいかわからない、そんな最初の迷いを解消します。"
+featured: true
 ---
 
 ![プログラミングのイラスト](/images/category-programming.svg)

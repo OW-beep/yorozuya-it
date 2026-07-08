@@ -3,6 +3,7 @@ title: "パスワードを安全に管理する方法(初心者向け)"
 category: "アプリ"
 date: "2026-07-18"
 excerpt: "全部同じパスワードを使い回していませんか。今日からできる安全な管理方法を紹介します。"
+featured: true
 ---
 
 ![アプリ操作のイラスト](/images/category-app.svg)
