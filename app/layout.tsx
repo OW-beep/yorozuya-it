@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Shippori_Mincho, Zen_Kaku_Gothic_New, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
@@ -49,6 +50,9 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | ITの困った、ぜんぶここに。`,
     description: SITE_DESCRIPTION,
   },
+  verification: {
+    google: "KYZp6leIoJkmXQipodIUtUhXTopgEfgqFiQ7eJZuRZA",
+  },
 };
 
 const websiteJsonLd = {
@@ -73,6 +77,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <SiteHeader />
         {children}
         <SiteFooter />
         <Script

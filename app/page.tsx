@@ -11,14 +11,7 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="bg-gradient-to-b from-indigo to-indigo-deep text-washi px-[6vw] pt-7 overflow-hidden">
-        <div className="flex justify-between items-center mb-14">
-          <div className="text-xl font-bold tracking-wide font-serif">
-            よろずや<span className="text-yamabuki font-mono ml-0.5">IT</span>
-          </div>
-          <div className="text-xs text-washi/55 font-mono">yorozuya-it.jp</div>
-        </div>
-
+      <section className="bg-gradient-to-b from-indigo to-indigo-deep text-washi px-[6vw] pt-10 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-5 items-end">
           <div className="pb-14">
             <span className="inline-block text-xs text-yamabuki tracking-widest mb-5 border-b border-yamabuki/40 pb-1.5 font-mono">
