@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PostCard from "@/components/PostCard";
 import TableOfContents from "@/components/TableOfContents";
 import FaqSection from "@/components/FaqSection";
+import ShareButtons from "@/components/ShareButtons";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -106,6 +107,8 @@ export default async function PostPage({
         className="prose max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:text-ink prose-p:leading-loose prose-li:text-ink prose-headings:scroll-mt-6"
         dangerouslySetInnerHTML={{ __html: post!.contentHtml }}
       />
+
+      <ShareButtons slug={post!.slug} title={post!.title} />
 
       <FaqSection items={post!.faq} />
 

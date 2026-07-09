@@ -53,6 +53,11 @@ export const metadata: Metadata = {
   verification: {
     google: "KYZp6leIoJkmXQipodIUtUhXTopgEfgqFiQ7eJZuRZA",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${SITE_URL}/feed.xml`,
+    },
+  },
 };
 
 const websiteJsonLd = {
