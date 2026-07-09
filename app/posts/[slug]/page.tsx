@@ -4,6 +4,8 @@ import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PostCard from "@/components/PostCard";
+import TableOfContents from "@/components/TableOfContents";
+import FaqSection from "@/components/FaqSection";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -60,7 +62,7 @@ export default async function PostPage({
     headline: post!.title,
     description: post!.excerpt,
     datePublished: post!.date,
-    dateModified: post!.date,
+    dateModified: post!.updated || post!.date,
     author: { "@type": "Organization", name: SITE_NAME },
     publisher: { "@type": "Organization", name: SITE_NAME },
     mainEntityOfPage: `${SITE_URL}/posts/${post!.slug}`,
@@ -90,13 +92,22 @@ export default async function PostPage({
         <h1 className="font-serif text-3xl font-bold mt-3 leading-snug">
           {post!.title}
         </h1>
-        <time className="text-xs text-ink-soft mt-3 block">{post!.date}</time>
+        <time className="text-xs text-ink-soft mt-3 block">
+          公開日:{post!.date}
+          {post!.updated && post!.updated !== post!.date && (
+            <span className="ml-3">更新日:{post!.updated}</span>
+          )}
+        </time>
       </div>
 
+      <TableOfContents items={post!.toc} />
+
       <article
-        className="prose max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:text-ink prose-p:leading-loose prose-li:text-ink"
+        className="prose max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:text-ink prose-p:leading-loose prose-li:text-ink prose-headings:scroll-mt-6"
         dangerouslySetInnerHTML={{ __html: post!.contentHtml }}
       />
+
+      <FaqSection items={post!.faq} />
 
       {related.length > 0 && (
         <section className="mt-16 pt-10 border-t border-ink/10">

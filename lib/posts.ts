@@ -11,9 +11,56 @@ export type PostMeta = {
   title: string;
   category: string;
   date: string;
+  updated?: string;
   excerpt: string;
   featured: boolean;
 };
+
+export type TocItem = {
+  id: string;
+  text: string;
+};
+
+export type FaqItem = {
+  q: string;
+  a: string;
+};
+
+function slugifyHeading(text: string, usedIds: Set<string>): string {
+  const base = text
+    .toLowerCase()
+    .replace(/[^\w\u3040-\u30ff\u3400-\u9fff]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "section";
+  let id = base;
+  let i = 2;
+  while (usedIds.has(id)) {
+    id = `${base}-${i}`;
+    i += 1;
+  }
+  usedIds.add(id);
+  return id;
+}
+
+// h2見出しにIDを埋め込みつつ、目次データを作る
+function injectHeadingIdsAndBuildToc(html: string): {
+  html: string;
+  toc: TocItem[];
+} {
+  const usedIds = new Set<string>();
+  const toc: TocItem[] = [];
+
+  const newHtml = html.replace(
+    /<h2>(.*?)<\/h2>/g,
+    (_match, inner: string) => {
+      const text = inner.replace(/<[^>]+>/g, "");
+      const id = slugifyHeading(text, usedIds);
+      toc.push({ id, text });
+      return `<h2 id="${id}">${inner}</h2>`;
+    }
+  );
+
+  return { html: newHtml, toc };
+}
 
 export function getSortedPostsData(): PostMeta[] {
   if (!fs.existsSync(postsDirectory)) return [];
@@ -33,6 +80,7 @@ export function getSortedPostsData(): PostMeta[] {
       title: matterResult.data.title as string,
       category: matterResult.data.category as string,
       date: matterResult.data.date as string,
+      updated: matterResult.data.updated as string | undefined,
       excerpt: matterResult.data.excerpt as string,
       featured: Boolean(matterResult.data.featured),
     };
@@ -78,14 +126,20 @@ export async function getPostData(slug: string) {
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const rawHtml = processedContent.toString();
+  const { html: contentHtml, toc } = injectHeadingIdsAndBuildToc(rawHtml);
+
+  const faq = (matterResult.data.faq as FaqItem[] | undefined) ?? [];
 
   return {
     slug,
     contentHtml,
+    toc,
+    faq,
     title: matterResult.data.title as string,
     category: matterResult.data.category as string,
     date: matterResult.data.date as string,
+    updated: matterResult.data.updated as string | undefined,
     excerpt: matterResult.data.excerpt as string,
     featured: Boolean(matterResult.data.featured),
   };

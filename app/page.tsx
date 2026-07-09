@@ -74,10 +74,10 @@ export default function Home() {
       {/* CATEGORIES */}
       <section className="px-[6vw] py-14 max-w-[1180px] mx-auto">
         <div className="flex justify-between items-baseline mb-8 border-b border-ink/10 pb-4">
-          <h2 className="font-serif text-2xl font-bold">4つの暖簾</h2>
-          <span className="text-xs text-ink-soft font-mono">04 STALLS</span>
+          <h2 className="font-serif text-2xl font-bold">5つの暖簾</h2>
+          <span className="text-xs text-ink-soft font-mono">05 STALLS</span>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ink/10 border border-ink/10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-ink/10 border border-ink/10">
           {CATEGORIES.map((cat) => (
             <Link
               key={cat.slug}

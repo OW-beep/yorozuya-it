@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { getSortedPostsData } from "@/lib/posts";
 import { CATEGORIES } from "@/lib/categories";
-import PostCard from "@/components/PostCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import PostSearch from "@/components/PostSearch";
+import Link from "next/link";
 
 export const metadata = {
   title: "記事一覧",
@@ -17,7 +17,7 @@ export default function PostsPage() {
 
       <h1 className="font-serif text-3xl font-bold mb-6">記事一覧</h1>
 
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex flex-wrap gap-2 mb-8">
         {CATEGORIES.map((cat) => (
           <Link
             key={cat.slug}
@@ -29,16 +29,7 @@ export default function PostsPage() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
-        {posts.length === 0 && (
-          <p className="py-10 text-sm text-ink-soft">
-            まだ記事がありません。content/posts に .md ファイルを追加してください。
-          </p>
-        )}
-      </div>
+      <PostSearch posts={posts} />
     </main>
   );
 }

@@ -35,6 +35,13 @@ export const CATEGORIES: Category[] = [
     desc: "はじめの一歩を、専門用語なしで。",
     image: "/images/category-programming.svg",
   },
+  {
+    slug: "trend",
+    label: "トレンド",
+    short: "時事",
+    desc: "話題のIT用語・技術動向をいち早く解説。",
+    image: "/images/category-trend.svg",
+  },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {
