@@ -1,7 +1,7 @@
 ---
 title: "REST APIとGraphQLの違いをやさしく解説"
 category: "プログラミング"
-date: "2026-08-16"
+date: "2026-05-24"
 excerpt: "どちらもAPIの設計方法。何が違うのか、レストランの注文で例えます。"
 featured: false
 ---

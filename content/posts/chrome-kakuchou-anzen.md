@@ -1,7 +1,7 @@
 ---
 title: "Chromeの拡張機能、安全に使うための基礎知識"
 category: "アプリ"
-date: "2026-08-24"
+date: "2026-05-28"
 excerpt: "便利だからと言って何でもインストールするのは実は要注意です。"
 featured: false
 ---

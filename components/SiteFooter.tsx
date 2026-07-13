@@ -14,6 +14,9 @@ export default function SiteFooter() {
         <Link href="/about" className="hover:text-ink">
           運営者情報
         </Link>
+        <Link href="/editorial-policy" className="hover:text-ink">
+          編集方針
+        </Link>
         <Link href="/privacy" className="hover:text-ink">
           プライバシーポリシー
         </Link>

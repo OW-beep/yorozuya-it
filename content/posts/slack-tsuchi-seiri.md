@@ -1,7 +1,7 @@
 ---
 title: "Slackの通知が多すぎる時の設定整理術"
 category: "アプリ"
-date: "2026-08-02"
+date: "2026-05-17"
 excerpt: "常に通知が鳴りっぱなし…集中力を保つための設定を整理しました。"
 featured: false
 ---

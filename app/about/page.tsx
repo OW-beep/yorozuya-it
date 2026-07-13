@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/site";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "運営者情報",
@@ -62,16 +63,19 @@ export default function AboutPage() {
           <h2 className="font-serif text-lg font-bold mb-2">
             お問い合わせ
           </h2>
-          <p>
-            記事内容の誤りのご指摘、ご質問、掲載依頼等は下記メールアドレスまでご連絡ください。内容を確認の上、担当者より返信いたします。
+          <p className="mb-5">
+            記事内容の誤りのご指摘、ご質問、掲載依頼等は、下記フォームまたはメールにてご連絡ください。内容を確認の上、担当者より返信いたします。
           </p>
-          <p className="mt-2 font-mono text-ink-soft">{CONTACT_EMAIL}</p>
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="inline-block mt-4 bg-yamabuki text-indigo-deep font-bold px-6 py-3 rounded text-sm no-underline"
-          >
-            メールでお問い合わせ
-          </a>
+          <ContactForm />
+          <p className="mt-4 text-xs text-ink-soft">
+            メールでのご連絡はこちら:
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-yamabuki-deep underline ml-1"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </p>
         </section>
 
         <section>

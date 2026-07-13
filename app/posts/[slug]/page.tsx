@@ -7,6 +7,7 @@ import PostCard from "@/components/PostCard";
 import TableOfContents from "@/components/TableOfContents";
 import FaqSection from "@/components/FaqSection";
 import ShareButtons from "@/components/ShareButtons";
+import ArticleByline from "@/components/ArticleByline";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -64,7 +65,7 @@ export default async function PostPage({
     description: post!.excerpt,
     datePublished: post!.date,
     dateModified: post!.updated || post!.date,
-    author: { "@type": "Organization", name: SITE_NAME },
+    author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/about` },
     publisher: { "@type": "Organization", name: SITE_NAME },
     mainEntityOfPage: `${SITE_URL}/posts/${post!.slug}`,
   };
@@ -100,6 +101,8 @@ export default async function PostPage({
           )}
         </time>
       </div>
+
+      <ArticleByline />
 
       <TableOfContents items={post!.toc} />
 

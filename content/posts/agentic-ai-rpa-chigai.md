@@ -1,7 +1,7 @@
 ---
 title: "エージェンティックAIとRPAの違いとは?"
 category: "トレンド"
-date: "2026-10-15"
+date: "2026-06-23"
 excerpt: "どちらも業務自動化の技術ですが、できることの幅に大きな違いがあります。"
 featured: false
 faq:

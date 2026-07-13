@@ -41,6 +41,11 @@ export default function SitemapPage() {
             </Link>
           </li>
           <li>
+            <Link href="/editorial-policy" className="text-yamabuki-deep hover:underline">
+              編集方針
+            </Link>
+          </li>
+          <li>
             <Link href="/privacy" className="text-yamabuki-deep hover:underline">
               プライバシーポリシー
             </Link>

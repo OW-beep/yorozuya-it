@@ -38,13 +38,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center md:justify-end items-end h-36 md:h-[300px] gap-1.5 pr-1">
+          <div className="flex justify-center md:justify-end items-end h-36 md:h-[300px] gap-1 md:gap-1.5 pr-1">
             {CATEGORIES.map((cat, i) => (
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
                 aria-label={`${cat.label}の記事一覧へ`}
-                className={`w-[62px] h-28 md:h-60 border-l border-r flex items-center justify-center animate-sway hover:opacity-80 transition-opacity ${
+                className={`w-[52px] md:w-[62px] h-28 md:h-60 border-l border-r flex items-center justify-center animate-sway hover:opacity-80 transition-opacity ${
                   i === 1
                     ? "bg-yamabuki/10 border-yamabuki/30"
                     : "bg-washi/[0.06] border-washi/20"
@@ -52,8 +52,8 @@ export default function Home() {
                 style={{ animationDelay: `${i * 0.3}s` }}
               >
                 <span
-                  className={`[writing-mode:vertical-rl] font-serif text-xl tracking-widest ${
-                    i === 1 ? "text-yamabuki font-mono text-lg" : "text-washi/50"
+                  className={`[writing-mode:vertical-rl] font-serif text-lg md:text-xl tracking-widest ${
+                    i === 1 ? "text-yamabuki font-mono text-base md:text-lg" : "text-washi/50"
                   }`}
                 >
                   {cat.short}
@@ -74,8 +74,8 @@ export default function Home() {
       {/* CATEGORIES */}
       <section className="px-[6vw] py-14 max-w-[1180px] mx-auto">
         <div className="flex justify-between items-baseline mb-8 border-b border-ink/10 pb-4">
-          <h2 className="font-serif text-2xl font-bold">5つの暖簾</h2>
-          <span className="text-xs text-ink-soft font-mono">05 STALLS</span>
+          <h2 className="font-serif text-2xl font-bold">5つのジャンル</h2>
+          <span className="text-xs text-ink-soft font-mono">05 CATEGORIES</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-ink/10 border border-ink/10">
           {CATEGORIES.map((cat) => (
