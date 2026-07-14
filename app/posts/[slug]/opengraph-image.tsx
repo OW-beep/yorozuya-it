@@ -1,22 +1,14 @@
 import { ImageResponse } from "next/og";
-import { getPostData } from "@/lib/posts";
+import { getPostFrontmatter } from "@/lib/posts";
 
-export const runtime = "edge";
 export const alt = "よろずやIT";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image({ params }: { params: { slug: string } }) {
-  let title = "よろずやIT";
-  let category = "";
-
-  try {
-    const post = await getPostData(params.slug);
-    title = post.title;
-    category = post.category;
-  } catch {
-    // フォールバック値をそのまま使用
-  }
+  const post = getPostFrontmatter(params.slug);
+  const title = post?.title ?? "よろずやIT";
+  const category = post?.category ?? "";
 
   return new ImageResponse(
     (

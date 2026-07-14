@@ -131,6 +131,22 @@ export function getAllPostSlugs() {
   }));
 }
 
+export function getPostFrontmatter(
+  slug: string
+): { title: string; category: string } | null {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const matterResult = matter(fileContents);
+    return {
+      title: matterResult.data.title as string,
+      category: matterResult.data.category as string,
+    };
+  } catch {
+    return null;
+  }
+}
+
 export async function getPostData(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
