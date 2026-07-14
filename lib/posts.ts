@@ -74,6 +74,8 @@ function extractHowToSteps(toc: TocItem[]): HowToStep[] {
     .filter((item) => CIRCLED_NUMBER.test(item.text))
     .map((item) => ({ name: item.text.replace(CIRCLED_NUMBER, "") }));
 }
+
+export function getSortedPostsData(): PostMeta[] {
   if (!fs.existsSync(postsDirectory)) return [];
 
   const fileNames = fs.readdirSync(postsDirectory).filter((f) =>
