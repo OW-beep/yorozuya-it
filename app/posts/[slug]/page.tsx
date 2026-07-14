@@ -70,12 +70,32 @@ export default async function PostPage({
     mainEntityOfPage: `${SITE_URL}/posts/${post!.slug}`,
   };
 
+  const howToJsonLd =
+    post!.howToSteps.length >= 2
+      ? {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: post!.title,
+          description: post!.excerpt,
+          step: post!.howToSteps.map((s) => ({
+            "@type": "HowToStep",
+            name: s.name,
+          })),
+        }
+      : null;
+
   return (
     <main className="max-w-[720px] mx-auto px-[6vw] py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {howToJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+        />
+      )}
       <Breadcrumbs
         items={[
           { label: "よろずやIT", href: "/" },

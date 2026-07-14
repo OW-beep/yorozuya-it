@@ -62,7 +62,18 @@ function injectHeadingIdsAndBuildToc(html: string): {
   return { html: newHtml, toc };
 }
 
-export function getSortedPostsData(): PostMeta[] {
+export type HowToStep = {
+  name: string;
+};
+
+// 丸数字(①②③...)で始まる見出しを「手順」として検出する
+const CIRCLED_NUMBER = /^[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮]\s*/;
+
+function extractHowToSteps(toc: TocItem[]): HowToStep[] {
+  return toc
+    .filter((item) => CIRCLED_NUMBER.test(item.text))
+    .map((item) => ({ name: item.text.replace(CIRCLED_NUMBER, "") }));
+}
   if (!fs.existsSync(postsDirectory)) return [];
 
   const fileNames = fs.readdirSync(postsDirectory).filter((f) =>
@@ -130,12 +141,14 @@ export async function getPostData(slug: string) {
   const { html: contentHtml, toc } = injectHeadingIdsAndBuildToc(rawHtml);
 
   const faq = (matterResult.data.faq as FaqItem[] | undefined) ?? [];
+  const howToSteps = extractHowToSteps(toc);
 
   return {
     slug,
     contentHtml,
     toc,
     faq,
+    howToSteps,
     title: matterResult.data.title as string,
     category: matterResult.data.category as string,
     date: matterResult.data.date as string,
