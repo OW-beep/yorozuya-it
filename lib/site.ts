@@ -1,4 +1,5 @@
-// 独自ドメインを取得したら、下記のURLをそのドメインに差し替え。
+// 独自ドメインを取得したら、下記のURLをそのドメインに差し替えてください。
+// 現時点ではVercelが発行したドメインをそのまま使用しています。
 export const SITE_URL = "https://yorozuya-it.vercel.app";
 export const SITE_NAME = "よろずやIT";
 export const CONTACT_EMAIL = "yorozuyait.info@gmail.com";
