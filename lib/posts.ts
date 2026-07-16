@@ -41,6 +41,99 @@ function slugifyHeading(text: string, usedIds: Set<string>): string {
   return id;
 }
 
+// セル内の簡単な強調(**太字**)だけ変換する
+function inlineMarkdown(text: string): string {
+  return text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
+function parseTableRow(line: string): string[] {
+  let trimmed = line.trim();
+  if (trimmed.startsWith("|")) trimmed = trimmed.slice(1);
+  if (trimmed.endsWith("|")) trimmed = trimmed.slice(0, -1);
+  return trimmed.split("|").map((cell) => cell.trim());
+}
+
+const TABLE_SEPARATOR = /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/;
+
+// remark(remark-gfm未使用)では表が変換されないため、
+// Markdownの表記法を、事前にプレースホルダーへ置き換えておき、
+// remark処理後に実際のテーブルHTMLへ差し替える(remarkの生HTML設定に依存しない確実な方式)
+function extractMarkdownTables(markdown: string): {
+  markdown: string;
+  tables: Map<string, string>;
+} {
+  const lines = markdown.split("\n");
+  const output: string[] = [];
+  const tables = new Map<string, string>();
+  let tableIndex = 0;
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const nextLine = lines[i + 1];
+
+    if (
+      line.includes("|") &&
+      nextLine !== undefined &&
+      TABLE_SEPARATOR.test(nextLine)
+    ) {
+      const headerCells = parseTableRow(line);
+      const bodyRows: string[][] = [];
+      let j = i + 2;
+      while (
+        j < lines.length &&
+        lines[j].includes("|") &&
+        lines[j].trim() !== ""
+      ) {
+        bodyRows.push(parseTableRow(lines[j]));
+        j++;
+      }
+
+      let tableHtml = '<table>\n<thead>\n<tr>\n';
+      headerCells.forEach((cell) => {
+        tableHtml += `<th>${inlineMarkdown(cell)}</th>\n`;
+      });
+      tableHtml += "</tr>\n</thead>\n<tbody>\n";
+      bodyRows.forEach((row) => {
+        tableHtml += "<tr>\n";
+        row.forEach((cell) => {
+          tableHtml += `<td>${inlineMarkdown(cell)}</td>\n`;
+        });
+        tableHtml += "</tr>\n";
+      });
+      tableHtml += "</tbody>\n</table>";
+
+      const placeholder = `TABLEPLACEHOLDER${tableIndex}`;
+      tables.set(placeholder, tableHtml);
+      tableIndex += 1;
+
+      output.push("");
+      output.push(placeholder);
+      output.push("");
+      i = j;
+    } else {
+      output.push(line);
+      i++;
+    }
+  }
+
+  return { markdown: output.join("\n"), tables };
+}
+
+// remark-html後のHTML中のプレースホルダーを、実際のテーブルHTMLに差し替える
+function restoreMarkdownTables(
+  html: string,
+  tables: Map<string, string>
+): string {
+  let result = html;
+  tables.forEach((tableHtml, placeholder) => {
+    result = result
+      .replace(`<p>${placeholder}</p>`, tableHtml)
+      .replace(placeholder, tableHtml);
+  });
+  return result;
+}
+
 // h2見出しにIDを埋め込みつつ、目次データを作る
 function injectHeadingIdsAndBuildToc(html: string): {
   html: string;
@@ -152,10 +245,15 @@ export async function getPostData(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 
+  const { markdown: preprocessed, tables } = extractMarkdownTables(
+    matterResult.content
+  );
+
   const processedContent = await remark()
     .use(html)
-    .process(matterResult.content);
-  const rawHtml = processedContent.toString();
+    .process(preprocessed);
+  const rawHtmlWithPlaceholders = processedContent.toString();
+  const rawHtml = restoreMarkdownTables(rawHtmlWithPlaceholders, tables);
   const { html: contentHtml, toc } = injectHeadingIdsAndBuildToc(rawHtml);
 
   const faq = (matterResult.data.faq as FaqItem[] | undefined) ?? [];
