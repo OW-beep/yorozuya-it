@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getSortedPostsData, getFeaturedPosts } from "@/lib/posts";
+import { getSortedPostsData, getFeaturedPosts, getPopularPosts } from "@/lib/posts";
 import { CATEGORIES } from "@/lib/categories";
 import PostCard from "@/components/PostCard";
 
@@ -7,6 +7,7 @@ export default function Home() {
   const posts = getSortedPostsData();
   const latest = posts.slice(0, 3);
   const featured = getFeaturedPosts(4);
+  const popular = getPopularPosts(4);
 
   return (
     <main>
@@ -22,8 +23,11 @@ export default function Home() {
               <br />
               <span className="text-yamabuki">ぜんぶここに。</span>
             </h1>
-            <p className="text-base leading-loose text-washi/80 max-w-[42ch] mb-7">
+            <p className="text-base leading-loose text-washi/80 max-w-[42ch] mb-2">
               エラー、アプリの使い方、聞きなれない専門用語まで。何でも屋のように、ITのあらゆる「わからない」を取り揃えています。
+            </p>
+            <p className="text-sm leading-loose text-washi/60 max-w-[42ch] mb-7">
+              パソコン・スマホ・AI・プログラミングを、初心者にも分かりやすく解説します。
             </p>
             <div className="flex gap-3 items-center">
               <Link
@@ -64,11 +68,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* ABOUT THIS SITE */}
       <section className="px-[6vw] pt-14 pb-2 max-w-[1180px] mx-auto">
-        <p className="text-sm leading-loose text-ink-soft max-w-[68ch]">
-          「よろずやIT」は、パソコン・スマホの操作やエラー、アプリの使い方、聞きなれないIT用語、プログラミングの基礎を、専門用語を使わずに解説するサイトです。困ったときに、いつでも気軽に立ち寄ってください。
-        </p>
+        <div className="border-l-2 border-yamabuki pl-6">
+          <h2 className="font-serif text-xl font-bold mb-4">よろずやITとは?</h2>
+          <ul className="space-y-2 text-sm leading-loose text-ink-soft">
+            <li>・専門用語をできるだけ使わず、図解付きでやさしく解説</li>
+            <li>・最新のAIニュースも、初心者にわかりやすく紹介</li>
+            <li>・Windows・スマホ・アプリの操作トラブルまで幅広く対応</li>
+            <li>・情報源を明記し、編集部の視点も交えてお届け</li>
+          </ul>
+        </div>
       </section>
 
       {/* CATEGORIES */}
@@ -111,6 +121,24 @@ export default function Home() {
                 <PostCard key={post.slug} post={post} />
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* POPULAR POSTS */}
+      {popular.length > 0 && (
+        <section className="px-[6vw] py-14 max-w-[1180px] mx-auto">
+          <div className="flex justify-between items-baseline mb-2">
+            <h2 className="font-serif text-2xl font-bold">人気記事</h2>
+            <span className="text-xs text-ink-soft font-mono">POPULAR</span>
+          </div>
+          <p className="text-xs text-ink-soft mb-6">
+            検索での反応が良かった記事をピックアップしています。
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {popular.map((post) => (
+              <PostCard key={post.slug} post={post} />
+            ))}
           </div>
         </section>
       )}

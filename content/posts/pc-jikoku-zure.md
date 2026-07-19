@@ -4,6 +4,7 @@ category: "PC・スマホ"
 date: "2026-05-27"
 excerpt: "気づいたら時計が数分〜数時間ずれている…実は内蔵の電池が原因かもしれません。"
 featured: false
+popular: true
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

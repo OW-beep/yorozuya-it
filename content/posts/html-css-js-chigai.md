@@ -3,6 +3,7 @@ title: "HTMLとCSSとJavaScript、それぞれの役割の違い"
 category: "プログラミング"
 date: "2026-05-13"
 excerpt: "Web制作の3点セット、実は家づくりに例えるとすっきり理解できます。"
+popular: true
 faq:
   - q: "HTMLとCSSとJavaScriptの違いを一言で言うと?"
     a: "HTMLは「骨組み(構造)」、CSSは「見た目(デザイン)」、JavaScriptは「動き(機能)」を担当します。3つはそれぞれ役割が異なり、組み合わさって1つのWebページが作られています。"

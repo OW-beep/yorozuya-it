@@ -4,6 +4,7 @@ category: "PC・スマホ"
 date: "2026-05-26"
 excerpt: "地図アプリで自分の位置が全然違う場所に表示される…よくある原因と直し方です。"
 featured: false
+popular: true
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

@@ -14,6 +14,7 @@ export type PostMeta = {
   updated?: string;
   excerpt: string;
   featured: boolean;
+  popular: boolean;
 };
 
 export type TocItem = {
@@ -189,6 +190,7 @@ export function getSortedPostsData(): PostMeta[] {
       updated: matterResult.data.updated as string | undefined,
       excerpt: matterResult.data.excerpt as string,
       featured: Boolean(matterResult.data.featured),
+      popular: Boolean(matterResult.data.popular),
     };
   });
 
@@ -202,6 +204,12 @@ export function getPostsByCategory(categoryLabel: string): PostMeta[] {
 export function getFeaturedPosts(limit?: number): PostMeta[] {
   const featured = getSortedPostsData().filter((p) => p.featured);
   return limit ? featured.slice(0, limit) : featured;
+}
+
+// Search Consoleで実際に検索表示・流入の実績が確認できた記事を「人気記事」として返す
+export function getPopularPosts(limit?: number): PostMeta[] {
+  const popular = getSortedPostsData().filter((p) => p.popular);
+  return limit ? popular.slice(0, limit) : popular;
 }
 
 export function getRelatedPosts(
@@ -271,5 +279,6 @@ export async function getPostData(slug: string) {
     updated: matterResult.data.updated as string | undefined,
     excerpt: matterResult.data.excerpt as string,
     featured: Boolean(matterResult.data.featured),
+    popular: Boolean(matterResult.data.popular),
   };
 }
