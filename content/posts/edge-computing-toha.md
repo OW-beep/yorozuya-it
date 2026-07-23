@@ -6,7 +6,7 @@ excerpt: "クラウドの逆を行く発想?近年よく聞くこの言葉を整
 featured: false
 ---
 
-![用語辞典のイラスト](/images/category-glossary.svg)
+![用語辞典のイラスト](/images/category-glossary-3.svg)
 
 ## エッジコンピューティングとは「手元で処理を済ませる」考え方
 

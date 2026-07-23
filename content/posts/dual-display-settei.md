@@ -6,7 +6,7 @@ excerpt: "モニターを2台つなげるだけで、作業効率がぐっと上
 featured: false
 ---
 
-![PCとスマホのイラスト](/images/category-pc.svg)
+![PCとスマホのイラスト](/images/category-pc-2.svg)
 
 ## デュアルディスプレイとは
 

@@ -6,7 +6,7 @@ excerpt: "「弊社のSaaSは…」というフレーズ、実はよく使う仕
 featured: false
 ---
 
-![用語辞典のイラスト](/images/category-glossary.svg)
+![用語辞典のイラスト](/images/category-glossary-3.svg)
 
 ## SaaSとは「インストール不要で使えるソフト」のこと
 

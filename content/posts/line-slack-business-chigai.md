@@ -6,7 +6,7 @@ excerpt: "「社内連絡、結局どっちを使えばいいの?」という疑
 featured: false
 ---
 
-![アプリ操作のイラスト](/images/category-app.svg)
+![アプリ操作のイラスト](/images/category-app-2.svg)
 
 ## どちらも「チャットツール」だが、設計思想が違う
 

@@ -7,7 +7,7 @@ featured: false
 popular: true
 ---
 
-![PCとスマホのイラスト](/images/category-pc.svg)
+![PCとスマホのイラスト](/images/category-pc-3.svg)
 
 ## パソコンの時刻(時計)は、内部の小さな電池で管理されている
 

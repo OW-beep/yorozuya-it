@@ -5,7 +5,7 @@ date: "2026-05-12"
 excerpt: "パソコンの土台となる仕組み。違いを知ると、機種選びの悩みも整理できます。"
 ---
 
-![用語辞典のイラスト](/images/category-glossary.svg)
+![用語辞典のイラスト](/images/category-glossary-3.svg)
 
 ## OSとは、パソコンやスマホの「土台」となるソフト
 

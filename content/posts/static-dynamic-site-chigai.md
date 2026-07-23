@@ -6,7 +6,7 @@ excerpt: "Webサイトの裏側にある、2つの異なる作りの違いをや
 featured: false
 ---
 
-![プログラミングのイラスト](/images/category-programming.svg)
+![プログラミングのイラスト](/images/category-programming-3.svg)
 
 ## 静的サイトとは
 

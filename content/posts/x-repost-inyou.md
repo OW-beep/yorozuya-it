@@ -6,7 +6,7 @@ excerpt: "似ているようで、実は伝わり方が大きく異なる2つの
 featured: false
 ---
 
-![アプリ操作のイラスト](/images/category-app.svg)
+![アプリ操作のイラスト](/images/category-app-3.svg)
 
 ## どちらも「拡散」だが、伝わり方が違う
 

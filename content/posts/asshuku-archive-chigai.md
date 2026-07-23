@@ -6,7 +6,7 @@ excerpt: "「ZIPファイル」という言葉、実は2つの異なる機能が
 featured: false
 ---
 
-![用語辞典のイラスト](/images/category-glossary.svg)
+![用語辞典のイラスト](/images/category-glossary-3.svg)
 
 ## アーカイブとは「複数のファイルを、1つにまとめる」こと
 

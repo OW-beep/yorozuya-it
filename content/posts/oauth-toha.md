@@ -11,7 +11,7 @@ faq:
     a: "はい。GoogleアカウントやXアカウントなどの設定画面には「連携済みのアプリ」を確認・削除できるメニューが用意されており、そこから合鍵の発行を取り消すことができます。"
 ---
 
-![用語辞典のイラスト](/images/category-glossary.svg)
+![用語辞典のイラスト](/images/category-glossary-2.svg)
 
 ## OAuthとは何か
 

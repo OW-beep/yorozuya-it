@@ -5,7 +5,7 @@ date: "2026-05-14"
 excerpt: "赤い文字を見た瞬間に閉じたくなる気持ち、わかります。でも実は宝の地図です。"
 ---
 
-![プログラミングのイラスト](/images/category-programming.svg)
+![プログラミングのイラスト](/images/category-programming-2.svg)
 
 ## エラーは「敵」ではなく「案内役」
 

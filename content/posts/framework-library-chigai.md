@@ -6,7 +6,7 @@ excerpt: "エンジニアが会話でよく使う2つの言葉、実は明確な
 featured: false
 ---
 
-![プログラミングのイラスト](/images/category-programming.svg)
+![プログラミングのイラスト](/images/category-programming-2.svg)
 
 ## どちらも「先人が作った便利な部品」という点は同じ
 

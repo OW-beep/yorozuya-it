@@ -15,7 +15,7 @@ faq:
     a: "計算方式によって異なりますが、一般的な表記では1TB(テラバイト)は約1,000GBです。厳密な2進数計算では1,024GBになります。"
 ---
 
-![用語辞典のイラスト](/images/category-glossary.svg)
+![用語辞典のイラスト](/images/category-glossary-2.svg)
 
 ## すべての基本は「ビット」
 

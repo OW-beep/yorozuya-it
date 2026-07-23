@@ -9,7 +9,7 @@ faq:
     a: "学習のしやすさや情報量の多さから、初めてAPIを設計する場合はREST APIから始めるのが一般的におすすめされています。GraphQLは、扱うデータの種類や画面が多く、必要な情報を柔軟に組み合わせたい場合に、より効果を発揮します。"
 ---
 
-![プログラミングのイラスト](/images/category-programming.svg)
+![プログラミングのイラスト](/images/category-programming-3.svg)
 
 ## まずAPIのおさらい
 
