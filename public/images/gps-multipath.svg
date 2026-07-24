@@ -1,0 +1,25 @@
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="320" fill="#F6F1E4"/>
+  <text x="350" y="28" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1B3550" text-anchor="middle">GPSの誤差はなぜ起こる?(マルチパスの例)</text>
+
+  <circle cx="150" cy="60" r="14" fill="#1B3550"/>
+  <text x="150" y="45" font-family="sans-serif" font-size="11" fill="#1B3550" text-anchor="middle">衛星A</text>
+  <circle cx="450" cy="55" r="14" fill="#1B3550"/>
+  <text x="450" y="40" font-family="sans-serif" font-size="11" fill="#1B3550" text-anchor="middle">衛星B</text>
+
+  <rect x="380" y="120" width="90" height="160" fill="#5C6B78"/>
+  <text x="425" y="205" font-family="sans-serif" font-size="12" fill="#F6F1E4" text-anchor="middle" transform="rotate(-90 425 205)">ビル</text>
+
+  <path d="M150,74 L250,270" stroke="#D9A441" stroke-width="3"/>
+  <path d="M450,69 L378,150" stroke="#D9A441" stroke-width="3"/>
+  <path d="M378,150 L250,270" stroke="#B23A3A" stroke-width="3" stroke-dasharray="5 4"/>
+
+  <circle cx="250" cy="270" r="10" fill="#1B3550"/>
+  <text x="250" y="298" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">スマホ</text>
+
+  <text x="520" y="130" font-family="sans-serif" font-size="11" fill="#B23A3A">反射して遠回り</text>
+  <text x="520" y="146" font-family="sans-serif" font-size="11" fill="#B23A3A">→ 時間差で誤差に</text>
+
+  <text x="150" y="200" font-family="sans-serif" font-size="11" fill="#1B3550">直接届く電波</text>
+  <text x="150" y="215" font-family="sans-serif" font-size="11" fill="#1B3550">(正確)</text>
+</svg>

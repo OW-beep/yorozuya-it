@@ -1,0 +1,14 @@
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="320" fill="#F6F1E4"/>
+  <text x="350" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">スマホの温度範囲と、真夏の車内の危険性</text>
+
+  <rect x="60" y="70" width="580" height="60" rx="10" fill="#1B3550"/>
+  <text x="350" y="105" font-family="sans-serif" font-size="14" fill="#F6F1E4" text-anchor="middle">使用に適した温度:およそ 0℃ 〜 35℃</text>
+
+  <rect x="60" y="150" width="580" height="55" rx="10" fill="#D9A441"/>
+  <text x="350" y="183" font-family="sans-serif" font-size="14" fill="#1B3550" text-anchor="middle">保管の上限目安:およそ 45℃ 前後</text>
+
+  <rect x="60" y="225" width="580" height="65" rx="10" fill="#B23A3A"/>
+  <text x="350" y="255" font-family="sans-serif" font-size="14" font-weight="bold" fill="#F6F1E4" text-anchor="middle">真夏の車内(特にダッシュボード付近)</text>
+  <text x="350" y="277" font-family="sans-serif" font-size="13" fill="#F6F1E4" text-anchor="middle">60〜80℃前後に達することがあり、危険水準を大きく超える</text>
+</svg>

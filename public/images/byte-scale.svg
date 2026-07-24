@@ -1,0 +1,32 @@
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="260" fill="#F6F1E4"/>
+  <text x="350" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">単位が上がるごとに、およそ1000倍ずつ大きくなる</text>
+
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="30" y="150" width="60" height="20" fill="#1B3550"/>
+    <text x="60" y="145" font-size="12" fill="#1B3550">B</text>
+
+    <rect x="130" y="130" width="60" height="40" fill="#1B3550"/>
+    <text x="160" y="122" font-size="12" fill="#1B3550">KB</text>
+
+    <rect x="230" y="105" width="60" height="65" fill="#1B3550"/>
+    <text x="260" y="97" font-size="12" fill="#1B3550">MB</text>
+
+    <rect x="330" y="75" width="60" height="95" fill="#D9A441"/>
+    <text x="360" y="67" font-size="12" fill="#1B3550">GB</text>
+
+    <rect x="430" y="45" width="60" height="125" fill="#D9A441"/>
+    <text x="460" y="37" font-size="12" fill="#1B3550">TB</text>
+  </g>
+
+  <line x1="20" y1="170" x2="510" y2="170" stroke="#5C6B78" stroke-width="2"/>
+
+  <text x="60" y="200" font-family="sans-serif" font-size="11" fill="#5C6B78" text-anchor="middle">文字数文字</text>
+  <text x="160" y="200" font-family="sans-serif" font-size="11" fill="#5C6B78" text-anchor="middle">短い文章</text>
+  <text x="260" y="200" font-family="sans-serif" font-size="11" fill="#5C6B78" text-anchor="middle">写真1枚</text>
+  <text x="360" y="200" font-family="sans-serif" font-size="11" fill="#5C6B78" text-anchor="middle">動画数分〜</text>
+  <text x="460" y="200" font-family="sans-serif" font-size="11" fill="#5C6B78" text-anchor="middle">HDD/SSD容量</text>
+
+  <text x="560" y="120" font-family="sans-serif" font-size="24" fill="#1B3550" text-anchor="middle">×1000</text>
+  <text x="560" y="145" font-family="sans-serif" font-size="24" fill="#1B3550" text-anchor="middle">ずつ</text>
+</svg>
