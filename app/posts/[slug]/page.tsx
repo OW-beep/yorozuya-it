@@ -8,6 +8,7 @@ import TableOfContents from "@/components/TableOfContents";
 import FaqSection from "@/components/FaqSection";
 import ShareButtons from "@/components/ShareButtons";
 import ArticleByline from "@/components/ArticleByline";
+import PostFooterNav from "@/components/PostFooterNav";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -145,6 +146,8 @@ export default async function PostPage({
           </div>
         </section>
       )}
+
+      <PostFooterNav />
     </main>
   );
 }
