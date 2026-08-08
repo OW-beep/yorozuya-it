@@ -44,6 +44,23 @@ export default function Home() {
                 新着記事へ →
               </a>
             </div>
+
+            {spotlight.length > 0 && (
+              <p className="text-xs text-washi/50 mt-4">
+                運営者より:
+                {spotlight.map((post, i) => (
+                  <span key={post.slug}>
+                    {i > 0 && "・"}
+                    <Link
+                      href={`/posts/${post.slug}`}
+                      className="text-washi/70 hover:text-yamabuki underline underline-offset-2 ml-1"
+                    >
+                      {post.title}
+                    </Link>
+                  </span>
+                ))}
+              </p>
+            )}
           </div>
 
           <div className="flex justify-center md:justify-end items-end h-36 md:h-[300px] gap-1 md:gap-1.5 pr-1">
@@ -71,39 +88,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* SPOTLIGHT: 運営者の実体験に基づく代表記事 */}
-      {spotlight.length > 0 && (
-        <section className="px-[6vw] pt-12 pb-2 max-w-[1180px] mx-auto">
-          <div className="bg-indigo-deep text-washi px-6 py-8 md:px-10 md:py-10">
-            <span className="inline-block text-xs text-yamabuki tracking-widest mb-3 font-mono">
-              運営者より
-            </span>
-            <h2 className="font-serif text-xl md:text-2xl font-bold mb-3 leading-snug">
-              約50社の支援に携わってきた経験から、伝えたいこと
-            </h2>
-            <p className="text-sm text-washi/75 leading-loose mb-6 max-w-[70ch]">
-              「よろずやIT」は個人運営のメディアですが、書き手は元公務員のITコンサルタント・データサイエンティストとして、これまでおおよそ50の企業・団体の支援に携わってきました。その中で見えてきたことを、2本の記事にまとめています。
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {spotlight.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/posts/${post.slug}`}
-                  className="block bg-washi/5 border border-washi/20 p-5 hover:bg-washi/10 transition-colors"
-                >
-                  <h3 className="font-serif text-base md:text-lg leading-snug mb-2 text-washi">
-                    {post.title}
-                  </h3>
-                  <p className="text-xs text-washi/70 leading-relaxed line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ABOUT THIS SITE */}
       <section className="px-[6vw] pt-14 pb-2 max-w-[1180px] mx-auto">
