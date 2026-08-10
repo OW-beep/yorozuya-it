@@ -266,6 +266,7 @@ export async function getPostData(slug: string) {
 
   const faq = (matterResult.data.faq as FaqItem[] | undefined) ?? [];
   const howToSteps = extractHowToSteps(toc);
+  const tldr = (matterResult.data.tldr as string[] | undefined) ?? [];
 
   return {
     slug,
@@ -273,6 +274,7 @@ export async function getPostData(slug: string) {
     toc,
     faq,
     howToSteps,
+    tldr,
     title: matterResult.data.title as string,
     category: matterResult.data.category as string,
     date: matterResult.data.date as string,

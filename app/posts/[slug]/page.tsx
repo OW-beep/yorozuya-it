@@ -8,6 +8,7 @@ import TableOfContents from "@/components/TableOfContents";
 import FaqSection from "@/components/FaqSection";
 import ShareButtons from "@/components/ShareButtons";
 import ArticleByline from "@/components/ArticleByline";
+import ConclusionBox from "@/components/ConclusionBox";
 import PostFooterNav from "@/components/PostFooterNav";
 
 export async function generateStaticParams() {
@@ -124,6 +125,8 @@ export default async function PostPage({
       </div>
 
       <ArticleByline />
+
+      <ConclusionBox items={post!.tldr} />
 
       <TableOfContents items={post!.toc} />
 
