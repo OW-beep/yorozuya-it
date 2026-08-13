@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-23"
 excerpt: "今の暗号が将来解読されるかもしれない…その備えとして研究が進む技術です。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-2.svg)

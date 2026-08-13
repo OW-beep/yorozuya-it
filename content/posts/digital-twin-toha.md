@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-08"
 excerpt: "工場や都市の「双子」をコンピューターの中に作る、そんな技術が広がっています。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

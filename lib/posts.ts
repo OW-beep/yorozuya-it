@@ -15,6 +15,7 @@ export type PostMeta = {
   excerpt: string;
   featured: boolean;
   popular: boolean;
+  noindex: boolean;
 };
 
 export type TocItem = {
@@ -191,6 +192,7 @@ export function getSortedPostsData(): PostMeta[] {
       excerpt: matterResult.data.excerpt as string,
       featured: Boolean(matterResult.data.featured),
       popular: Boolean(matterResult.data.popular),
+      noindex: Boolean(matterResult.data.noindex),
     };
   });
 
@@ -282,5 +284,6 @@ export async function getPostData(slug: string) {
     excerpt: matterResult.data.excerpt as string,
     featured: Boolean(matterResult.data.featured),
     popular: Boolean(matterResult.data.popular),
+    noindex: Boolean(matterResult.data.noindex),
   };
 }

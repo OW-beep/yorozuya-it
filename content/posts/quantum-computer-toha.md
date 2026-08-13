@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-21"
 excerpt: "「計算が速い」だけでは語れない、根本的な仕組みの違いをやさしく解説します。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

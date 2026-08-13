@@ -1,0 +1,21 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="300" fill="#F6F1E4"/>
+  <text x="350" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">決まったメニューか、オーダーメイドか</text>
+
+  <text x="175" y="60" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B3550" text-anchor="middle">REST API</text>
+  <rect x="65" y="75" width="220" height="130" rx="8" fill="#1B3550"/>
+  <text x="175" y="100" font-family="sans-serif" font-size="11" fill="#F6F1E4" text-anchor="middle">「Aセット」を注文</text>
+  <text x="175" y="125" font-family="sans-serif" font-size="10" fill="#F6F1E4" text-anchor="middle">名前・住所・年齢が</text>
+  <text x="175" y="140" font-family="sans-serif" font-size="10" fill="#F6F1E4" text-anchor="middle">セットでまとめて届く</text>
+  <text x="175" y="165" font-family="sans-serif" font-size="10" fill="#D9A441" text-anchor="middle">名前だけ欲しくても</text>
+  <text x="175" y="180" font-family="sans-serif" font-size="10" fill="#D9A441" text-anchor="middle">全部ついてくる</text>
+
+  <text x="525" y="60" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B3550" text-anchor="middle">GraphQL</text>
+  <rect x="415" y="75" width="220" height="130" rx="8" fill="#D9A441"/>
+  <text x="525" y="100" font-family="sans-serif" font-size="11" fill="#1B3550" text-anchor="middle">「名前だけください」</text>
+  <text x="525" y="125" font-family="sans-serif" font-size="10" fill="#1B3550" text-anchor="middle">と個別にオーダー</text>
+  <text x="525" y="150" font-family="sans-serif" font-size="10" fill="#1B3550" text-anchor="middle">欲しいものだけが</text>
+  <text x="525" y="165" font-family="sans-serif" font-size="10" fill="#1B3550" text-anchor="middle">ピンポイントで届く</text>
+
+  <text x="350" y="245" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">RESTはシンプルで分かりやすい、GraphQLは無駄なく取得できる</text>
+</svg>

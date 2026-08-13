@@ -78,6 +78,26 @@ export default function ContactForm() {
         />
       </div>
       <div>
+        <label htmlFor="inquiryType" className="block text-xs text-ink-soft mb-1.5">
+          お問い合わせ種別
+        </label>
+        <select
+          id="inquiryType"
+          name="inquiryType"
+          required
+          defaultValue=""
+          className="w-full border border-ink/15 bg-washi px-3 py-2.5 text-sm focus:outline-none focus:border-yamabuki-deep"
+        >
+          <option value="" disabled>
+            選択してください
+          </option>
+          <option value="記事内容の誤り・ご質問">記事内容の誤り・ご質問</option>
+          <option value="データ分析のご依頼">データ分析のご依頼</option>
+          <option value="IT活用に関するご相談">IT活用に関するご相談</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div>
         <label
           htmlFor="message"
           className="block text-xs text-ink-soft mb-1.5"

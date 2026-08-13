@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-07-06"
 excerpt: "長い会話をしているとAIが前の内容を忘れる…その理由を解説します。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

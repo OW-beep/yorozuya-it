@@ -1,0 +1,18 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="300" fill="#F6F1E4"/>
+  <text x="350" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">Webページを支える3つの層</text>
+
+  <rect x="200" y="60" width="300" height="55" rx="8" fill="#1B3550"/>
+  <text x="350" y="83" font-family="sans-serif" font-size="13" font-weight="bold" fill="#F6F1E4" text-anchor="middle">JavaScript ー 動き・機能</text>
+  <text x="350" y="100" font-family="sans-serif" font-size="10" fill="#F6F1E4" text-anchor="middle">クリックすると反応する、など</text>
+
+  <rect x="170" y="130" width="360" height="55" rx="8" fill="#5C6B78"/>
+  <text x="350" y="153" font-family="sans-serif" font-size="13" font-weight="bold" fill="#F6F1E4" text-anchor="middle">CSS ー 見た目・デザイン</text>
+  <text x="350" y="170" font-family="sans-serif" font-size="10" fill="#F6F1E4" text-anchor="middle">色・配置・文字の大きさなど</text>
+
+  <rect x="140" y="200" width="420" height="55" rx="8" fill="#D9A441"/>
+  <text x="350" y="223" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B3550" text-anchor="middle">HTML ー 骨組み・構造</text>
+  <text x="350" y="240" font-family="sans-serif" font-size="10" fill="#1B3550" text-anchor="middle">見出し・段落・画像・ボタンの配置など、土台になる部分</text>
+
+  <text x="350" y="280" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">土台(HTML)の上に、見た目(CSS)と動き(JS)が積み重なっている</text>
+</svg>

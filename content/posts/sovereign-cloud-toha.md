@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-09"
 excerpt: "クラウドにも「国籍」がある、という新しい考え方が広まりつつあります。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-2.svg)

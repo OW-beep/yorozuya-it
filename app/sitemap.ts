@@ -4,7 +4,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getSortedPostsData();
+  const posts = getSortedPostsData().filter((post) => !post.noindex);
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/posts/${post.slug}`,

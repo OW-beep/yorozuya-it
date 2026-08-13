@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-07-05"
 excerpt: "「AI搭載」の表示、実態が伴っているとは限らない、という指摘が増えています。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-3.svg)

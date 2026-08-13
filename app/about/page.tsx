@@ -68,12 +68,12 @@ export default function AboutPage() {
           </ul>
         </section>
 
-        <section>
+        <section id="contact">
           <h2 className="font-serif text-lg font-bold mb-2">
-            お問い合わせ
+            お問い合わせ・お仕事のご相談
           </h2>
           <p className="mb-5">
-            記事内容の誤りのご指摘、ご質問、掲載依頼等は、下記フォームまたはメールにてご連絡ください。内容を確認の上、担当者より返信いたします。
+            記事内容の誤りのご指摘やご質問はもちろん、個人・法人問わず「自社のデータを分析してほしい」「IT活用について相談したい」といったお仕事のご相談も、下記フォームまたはメールにて承っております。内容を確認の上、担当者より返信いたします。
           </p>
           <ContactForm />
           <p className="mt-4 text-xs text-ink-soft">

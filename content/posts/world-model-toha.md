@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-07-10"
 excerpt: "文章だけでなく、物理法則までAIが理解し始めている、という話題です。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-3.svg)

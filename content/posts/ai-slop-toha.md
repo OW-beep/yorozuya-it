@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-28"
 excerpt: "AIによる大量生産コンテンツを指す、やや皮肉のこもった新しい言葉です。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-2.svg)

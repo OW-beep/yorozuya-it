@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-06"
 excerpt: "開発チームの「働きやすさ」を専門に整える、新しい役割が注目されています。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-2.svg)

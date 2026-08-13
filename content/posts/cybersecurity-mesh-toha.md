@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-09"
 excerpt: "働く場所も使うクラウドもバラバラな時代の、新しい防御の考え方です。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

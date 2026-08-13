@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-11"
 excerpt: "「AIは大きくすればするほど賢くなる」と言われる理由、研究の要点をまとめました。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

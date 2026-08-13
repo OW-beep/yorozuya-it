@@ -17,6 +17,8 @@ faq:
 
 ## Webページは3つの言語の組み合わせでできている
 
+![HTML・CSS・JavaScriptの役割を示す図解](/images/html-css-js-layers-diagram.svg)
+
 普段何気なく見ているWebページの多くは、「HTML」「CSS」「JavaScript」という3つの技術が組み合わさってできています。それぞれ役割がはっきり分かれているので、家づくりに例えて理解してみましょう。
 
 ## HTML:骨組み・構造を作る

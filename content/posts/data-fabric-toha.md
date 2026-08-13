@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-07"
 excerpt: "社内のあちこちに散らばったデータ、実はうまく活用できていない企業が多いそうです。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

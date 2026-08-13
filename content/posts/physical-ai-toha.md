@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-05"
 excerpt: "AIが画面の中から飛び出して、現実世界で働き始める時代のキーワードです。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

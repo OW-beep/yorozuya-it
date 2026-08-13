@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-05"
 excerpt: "1つのAIに全部任せるのではなく、役割分担させるという新しい発想です。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)

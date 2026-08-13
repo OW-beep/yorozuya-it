@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-07-11"
 excerpt: "「デジタルネイティブ」の次に生まれた、新しい世代を表す言葉です。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend-3.svg)

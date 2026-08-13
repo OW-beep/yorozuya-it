@@ -4,6 +4,7 @@ category: "トレンド"
 date: "2026-06-10"
 excerpt: "ChatGPTなど多くの生成AIの土台となった、有名な研究の考え方を要約しました。"
 featured: false
+noindex: true
 ---
 
 ![トレンドのイラスト](/images/category-trend.svg)
