@@ -50,3 +50,10 @@ featured: false
 ## 押さえておきたいポイント
 
 ダークパターンは、利用者の心理を巧みに利用した、誤誘導のデザイン手法です。「使いやすさ」の裏に隠れた意図に気づく視点を持っておくことが、身を守る第一歩になります。
+
+## 参考
+
+- [消費者庁 デジタル化に伴う新たな課題への対応](https://www.caa.go.jp/policies/policy/consumer_policy/meeting_materials/review_meeting_003/)
+- [国民生活センター](https://www.kokusen.go.jp/)
+
+※ 規制や事例は変化することがあるため、最新の情報は上記の公式ページもあわせてご確認ください。
