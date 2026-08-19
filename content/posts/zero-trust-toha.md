@@ -59,3 +59,10 @@ faq:
 ## 要点を整理すると
 
 ゼロトラストは、「性善説」に頼らず、常に検証を行うことでセキュリティを高める考え方です。働き方が多様化する中で、今後さらに標準的な考え方になっていくと見られています。
+
+## 参考
+
+- [ゼロトラスト移行のすゝめ - IPA 独立行政法人 情報処理推進機構](https://www.ipa.go.jp/jinzai/ics/core_human_resource/final_project/2022/zero-trust-mgn.html)
+- [テレワークにおけるセキュリティ確保 - 総務省](https://www.soumu.go.jp/main_sosiki/cybersecurity/telework/)
+
+※ 内容は変化することがあるため、最新の情報は上記の公式ページもあわせてご確認ください。
