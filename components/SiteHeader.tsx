@@ -8,6 +8,9 @@ export default function SiteHeader() {
         よろずや<span className="text-yamabuki font-mono ml-0.5">IT</span>
       </Link>
       <nav className="flex items-center gap-5 text-xs font-mono flex-wrap">
+        <Link href="/tools/teishutsu-check" className="text-yamabuki hover:text-yamabuki-deep font-bold">
+          ファイル診断
+        </Link>
         <Link href="/posts" className="text-washi/75 hover:text-washi">
           記事一覧
         </Link>

@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: SITE_URL, changeFrequency: "daily", priority: 1.0 },
     { url: `${SITE_URL}/posts`, changeFrequency: "daily", priority: 0.9 },
+    { url: `${SITE_URL}/tools/teishutsu-check`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/about`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/editorial-policy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
