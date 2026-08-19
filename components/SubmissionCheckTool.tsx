@@ -75,10 +75,25 @@ export default function SubmissionCheckTool() {
   const overallLevel: RiskLevel =
     highCount > 0 ? "high" : midCount > 0 ? "mid" : lowCount > 0 ? "low" : "ok";
 
+  const [expanded, setExpanded] = useState<Set<number>>(new Set());
+
+  const toggleExpanded = (i: number) => {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) {
+        next.delete(i);
+      } else {
+        next.add(i);
+      }
+      return next;
+    });
+  };
+
   const reset = () => {
     setFileName(null);
     setFindings(null);
     setError(null);
+    setExpanded(new Set());
     if (inputRef.current) inputRef.current.value = "";
   };
 
@@ -210,6 +225,21 @@ export default function SubmissionCheckTool() {
                     {LEVEL_META[f.level].badge} {f.title}
                   </p>
                   <p className="text-sm text-ink mt-1">{f.detail}</p>
+                  {f.guidance && (
+                    <>
+                      <button
+                        onClick={() => toggleExpanded(i)}
+                        className="text-xs text-indigo underline hover:no-underline mt-2 inline-block"
+                      >
+                        {expanded.has(i) ? "対処法を閉じる ▲" : "どうすればいい? ▼"}
+                      </button>
+                      {expanded.has(i) && (
+                        <p className="text-xs text-ink-soft mt-2 leading-relaxed border-t border-ink/10 pt-2">
+                          {f.guidance}
+                        </p>
+                      )}
+                    </>
+                  )}
                 </div>
               ))}
           </div>
