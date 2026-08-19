@@ -1,0 +1,27 @@
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="340" fill="#F6F1E4"/>
+  <text x="350" y="32" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">VPNは「専用の暗号化トンネル」を作る</text>
+
+  <rect x="40" y="70" width="110" height="70" rx="8" fill="#1B3550"/>
+  <text x="95" y="110" font-family="sans-serif" font-size="13" fill="#F6F1E4" text-anchor="middle">自分の端末</text>
+
+  <rect x="550" y="70" width="110" height="70" rx="8" fill="#1B3550"/>
+  <text x="605" y="110" font-family="sans-serif" font-size="13" fill="#F6F1E4" text-anchor="middle">アクセス先</text>
+
+  <rect x="60" y="180" width="580" height="90" rx="45" fill="none" stroke="#5C6B78" stroke-width="2" stroke-dasharray="3 5"/>
+  <text x="350" y="175" font-family="sans-serif" font-size="12" fill="#5C6B78" text-anchor="middle">公共のインターネット網(誰でも通れる道)</text>
+
+  <rect x="90" y="205" width="520" height="40" rx="20" fill="#D9A441"/>
+  <text x="350" y="230" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1B3550" text-anchor="middle">VPNトンネル(暗号化された専用の通り道)</text>
+
+  <path d="M150,105 h400" stroke="#1B3550" stroke-width="2" stroke-dasharray="2 4"/>
+
+  <g fill="#B23A3A">
+    <circle cx="250" cy="150" r="4"/>
+    <circle cx="350" cy="150" r="4"/>
+    <circle cx="450" cy="150" r="4"/>
+  </g>
+  <text x="350" y="145" font-family="sans-serif" font-size="11" fill="#B23A3A" text-anchor="middle">第三者による盗み見のリスク</text>
+
+  <text x="350" y="300" font-family="sans-serif" font-size="13" fill="#1B3550" text-anchor="middle">トンネルの中を通せば、外から通信内容を読み取られにくくなる</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="300" fill="#F6F1E4"/>
+  <text x="350" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">「誰に」「どんな形で」を足すだけで変わる</text>
+
+  <text x="175" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#5C6B78" text-anchor="middle">Before</text>
+  <rect x="55" y="75" width="240" height="90" rx="8" fill="#ffffff" stroke="#5C6B78" stroke-width="2"/>
+  <text x="175" y="105" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">「会議の議事録を</text>
+  <text x="175" y="123" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">まとめて」</text>
+  <text x="175" y="150" font-family="sans-serif" font-size="10" fill="#5C6B78" text-anchor="middle">→ 漠然とした要約が返る</text>
+
+  <path d="M300,120 h95" stroke="#5C6B78" stroke-width="2" fill="none" marker-end="url(#arrowAI)"/>
+
+  <text x="525" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9A441" text-anchor="middle">After</text>
+  <rect x="405" y="75" width="240" height="120" rx="8" fill="#ffffff" stroke="#D9A441" stroke-width="2"/>
+  <text x="525" y="98" font-family="sans-serif" font-size="11" fill="#1B3550" text-anchor="middle">「上司に共有するため、</text>
+  <text x="525" y="116" font-family="sans-serif" font-size="11" fill="#1B3550" text-anchor="middle">決定事項・未決事項・</text>
+  <text x="525" y="134" font-family="sans-serif" font-size="11" fill="#1B3550" text-anchor="middle">担当者・期限の4項目で」</text>
+  <text x="525" y="165" font-family="sans-serif" font-size="10" font-weight="bold" fill="#D9A441" text-anchor="middle">→ そのまま使える形で返る</text>
+
+  <text x="350" y="240" font-family="sans-serif" font-size="13" fill="#1B3550" text-anchor="middle">「誰に」「何のために」「どんな形で」を1つ足すだけ</text>
+  <text x="350" y="262" font-family="sans-serif" font-size="12" fill="#5C6B78" text-anchor="middle">AIへの指示も、人に仕事を頼むのと同じ</text>
+
+  <defs>
+    <marker id="arrowAI" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5C6B78" />
+    </marker>
+  </defs>
+</svg>

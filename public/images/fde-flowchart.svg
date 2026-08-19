@@ -1,0 +1,38 @@
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="420" fill="#F6F1E4"/>
+  <text x="300" y="30" font-family="sans-serif" font-size="15" fill="#1B3550" text-anchor="middle" font-weight="bold">FDEが機能する仕組み(循環図)</text>
+
+  <g font-family="sans-serif" font-size="13" text-anchor="middle">
+    <rect x="200" y="50" width="200" height="42" fill="#1B3550"/>
+    <text x="300" y="76" fill="#F6F1E4">企業がAIを導入</text>
+
+    <line x1="300" y1="92" x2="300" y2="112" stroke="#5C6B78" stroke-width="2"/>
+    <polygon points="294,108 306,108 300,120" fill="#5C6B78"/>
+
+    <rect x="200" y="120" width="200" height="42" fill="#5C6B78"/>
+    <text x="300" y="146" fill="#F6F1E4">現場で使われず停滞</text>
+
+    <line x1="300" y1="162" x2="300" y2="182" stroke="#5C6B78" stroke-width="2"/>
+    <polygon points="294,178 306,178 300,190" fill="#5C6B78"/>
+
+    <rect x="180" y="190" width="240" height="42" fill="#D9A441"/>
+    <text x="300" y="216" fill="#1B3550" font-weight="bold">FDEが現場に常駐し業務を調整</text>
+
+    <line x1="300" y1="232" x2="300" y2="252" stroke="#5C6B78" stroke-width="2"/>
+    <polygon points="294,248 306,248 300,260" fill="#5C6B78"/>
+
+    <rect x="200" y="260" width="200" height="42" fill="#1B3550"/>
+    <text x="300" y="286" fill="#F6F1E4">現場での利用率が向上</text>
+
+    <line x1="300" y1="302" x2="300" y2="322" stroke="#5C6B78" stroke-width="2"/>
+    <polygon points="294,318 306,318 300,330" fill="#5C6B78"/>
+
+    <rect x="170" y="330" width="260" height="42" fill="#5C6B78"/>
+    <text x="300" y="356" fill="#F6F1E4">得た知見を自社製品へ反映</text>
+
+    <!-- 循環の矢印(製品改善が次の導入企業へ) -->
+    <path d="M 420 351 C 520 351 520 71 400 71" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="5,5"/>
+    <polygon points="404,65 404,77 392,71" fill="#D9A441"/>
+    <text x="500" y="210" fill="#5C6B78" font-size="11" transform="rotate(90 500 210)">次の導入企業へ還元</text>
+  </g>
+</svg>

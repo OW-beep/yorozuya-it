@@ -1,0 +1,22 @@
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="340" fill="#F6F1E4"/>
+  <text x="350" y="32" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">二段階認証とパスキーの仕組みの違い</text>
+
+  <rect x="40" y="60" width="290" height="250" rx="10" fill="#1B3550"/>
+  <text x="185" y="90" font-family="sans-serif" font-size="15" font-weight="bold" fill="#F6F1E4" text-anchor="middle">二段階認証</text>
+  <rect x="65" y="110" width="240" height="46" rx="6" fill="#EFE7D3"/>
+  <text x="185" y="138" font-family="sans-serif" font-size="13" fill="#1B3550" text-anchor="middle">① パスワードを入力</text>
+  <text x="185" y="168" font-family="sans-serif" font-size="18" fill="#D9A441" text-anchor="middle">+</text>
+  <rect x="65" y="180" width="240" height="46" rx="6" fill="#EFE7D3"/>
+  <text x="185" y="208" font-family="sans-serif" font-size="13" fill="#1B3550" text-anchor="middle">② 確認コード等を入力</text>
+  <text x="185" y="250" font-family="sans-serif" font-size="12" fill="#EFE7D3" text-anchor="middle">パスワードの弱点を</text>
+  <text x="185" y="268" font-family="sans-serif" font-size="12" fill="#EFE7D3" text-anchor="middle">追加の確認で補強</text>
+
+  <rect x="370" y="60" width="290" height="250" rx="10" fill="#D9A441"/>
+  <text x="515" y="90" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1B3550" text-anchor="middle">パスキー</text>
+  <rect x="395" y="140" width="240" height="70" rx="6" fill="#F6F1E4"/>
+  <text x="515" y="170" font-family="sans-serif" font-size="13" fill="#1B3550" text-anchor="middle">顔認証・指紋認証・</text>
+  <text x="515" y="192" font-family="sans-serif" font-size="13" fill="#1B3550" text-anchor="middle">画面ロックのみ</text>
+  <text x="515" y="250" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">パスワードという</text>
+  <text x="515" y="268" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">概念自体を使わない</text>
+</svg>
