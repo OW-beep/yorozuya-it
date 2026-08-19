@@ -18,6 +18,8 @@ featured: false
 
 ## 移行前チェックリスト
 
+![機種変更で移行を忘れがちな項目のチェックリスト図解](/images/kishu-hen-checklist-diagram.svg)
+
 | 項目 | 確認ポイント |
 |---|---|
 | 連絡先 | Googleアカウント・iCloudと同期されているか |

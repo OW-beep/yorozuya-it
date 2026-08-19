@@ -1,0 +1,23 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="300" fill="#F6F1E4"/>
+  <text x="350" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1B3550" text-anchor="middle">共有画面のイメージ(設定 → 共有相手を追加)</text>
+
+  <rect x="80" y="55" width="540" height="200" rx="10" fill="#ffffff" stroke="#1B3550" stroke-width="1.5"/>
+  <rect x="80" y="55" width="540" height="36" rx="10" fill="#1B3550"/>
+  <text x="100" y="78" font-family="sans-serif" font-size="12" fill="#F6F1E4">カレンダーの設定と共有</text>
+
+  <text x="100" y="115" font-family="sans-serif" font-size="11" fill="#1B3550">特定のユーザーとの共有</text>
+  <rect x="100" y="125" width="340" height="30" rx="4" fill="#F6F1E4" stroke="#5C6B78" stroke-width="1"/>
+  <text x="112" y="145" font-family="sans-serif" font-size="10" fill="#5C6B78">example@gmail.com</text>
+  <rect x="450" y="125" width="90" height="30" rx="4" fill="#D9A441"/>
+  <text x="495" y="145" font-family="sans-serif" font-size="10" fill="#1B3550" text-anchor="middle">送信</text>
+
+  <text x="100" y="185" font-family="sans-serif" font-size="11" fill="#1B3550">権限:</text>
+  <rect x="150" y="172" width="120" height="26" rx="4" fill="#F6F1E4" stroke="#5C6B78" stroke-width="1"/>
+  <text x="210" y="190" font-family="sans-serif" font-size="10" fill="#1B3550" text-anchor="middle">予定の変更権限 ▾</text>
+
+  <line x1="100" y1="215" x2="600" y2="215" stroke="#5C6B78" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="100" y="238" font-family="sans-serif" font-size="10" fill="#5C6B78">※ 権限は「閲覧のみ」〜「変更・共有権限あり」まで段階的に選べる</text>
+
+  <text x="350" y="280" font-family="sans-serif" font-size="12" fill="#1B3550" text-anchor="middle">共有は後からいつでも変更・解除できる</text>
+</svg>
