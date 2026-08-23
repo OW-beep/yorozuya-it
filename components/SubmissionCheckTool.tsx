@@ -97,6 +97,7 @@ export default function SubmissionCheckTool() {
     if (inputRef.current) inputRef.current.value = "";
   };
 
+
   return (
     <div className="max-w-2xl mx-auto">
       {/* 提出先の選択 */}
@@ -247,6 +248,7 @@ export default function SubmissionCheckTool() {
           <p className="text-xs text-ink-soft mt-6">
             ※ このツールはExcelファイルの構造を機械的に検査するもので、内容の安全性を保証するものではありません。最終的な確認は、必ずご自身の目でも行ってください。非表示シートや外部リンクなど、削除によってファイルの計算結果が変わる可能性がある項目は、自動では変更していません。
           </p>
+
         </div>
       )}
     </div>
