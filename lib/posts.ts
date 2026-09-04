@@ -28,6 +28,13 @@ export type FaqItem = {
   a: string;
 };
 
+export type AffiliateItem = {
+  name: string;
+  note?: string;
+  url: string;
+  image?: string;
+};
+
 function slugifyHeading(text: string, usedIds: Set<string>): string {
   const base = text
     .toLowerCase()
@@ -269,6 +276,7 @@ export async function getPostData(slug: string) {
   const faq = (matterResult.data.faq as FaqItem[] | undefined) ?? [];
   const howToSteps = extractHowToSteps(toc);
   const tldr = (matterResult.data.tldr as string[] | undefined) ?? [];
+  const affiliate = matterResult.data.affiliate as AffiliateItem | undefined;
 
   return {
     slug,
@@ -277,6 +285,7 @@ export async function getPostData(slug: string) {
     faq,
     howToSteps,
     tldr,
+    affiliate,
     title: matterResult.data.title as string,
     category: matterResult.data.category as string,
     date: matterResult.data.date as string,

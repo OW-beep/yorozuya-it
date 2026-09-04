@@ -10,6 +10,7 @@ import ShareButtons from "@/components/ShareButtons";
 import ArticleByline from "@/components/ArticleByline";
 import ConclusionBox from "@/components/ConclusionBox";
 import PostFooterNav from "@/components/PostFooterNav";
+import AffiliateBanner from "@/components/AffiliateBanner";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -137,6 +138,8 @@ export default async function PostPage({
         className="prose max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:text-ink prose-p:leading-loose prose-li:text-ink prose-headings:scroll-mt-6"
         dangerouslySetInnerHTML={{ __html: post!.contentHtml }}
       />
+
+      {post!.affiliate && <AffiliateBanner item={post!.affiliate} />}
 
       <ShareButtons slug={post!.slug} title={post!.title} />
 
