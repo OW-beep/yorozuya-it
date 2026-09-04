@@ -1,8 +1,8 @@
 <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="420" fill="#F6F1E4"/>
-  <text x="300" y="30" font-family="sans-serif" font-size="15" fill="#1B3550" text-anchor="middle" font-weight="bold">FDEが機能する仕組み(循環図)</text>
+  <text x="300" y="30" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="15" fill="#1B3550" text-anchor="middle" font-weight="bold">FDEが機能する仕組み(循環図)</text>
 
-  <g font-family="sans-serif" font-size="13" text-anchor="middle">
+  <g font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="13" text-anchor="middle">
     <rect x="200" y="50" width="200" height="42" fill="#1B3550"/>
     <text x="300" y="76" fill="#F6F1E4">企業がAIを導入</text>
 
