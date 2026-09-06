@@ -3,6 +3,7 @@ import { Shippori_Mincho, Zen_Kaku_Gothic_New, JetBrains_Mono } from "next/font/
 import Script from "next/script";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import BookRankingCarousel from "@/components/BookRankingCarousel";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
@@ -84,6 +85,7 @@ export default function RootLayout({
         />
         <SiteHeader />
         {children}
+        <BookRankingCarousel />
         <SiteFooter />
         <Script
           async
