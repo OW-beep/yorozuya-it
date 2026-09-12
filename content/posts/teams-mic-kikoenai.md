@@ -18,6 +18,7 @@ faq:
 affiliate:
   name: "音質改善・ノイズ対策にWeb会議用ヘッドセットを探す"
   url: "https://www.amazon.co.jp/s?k=Web%E4%BC%9A%E8%AD%B0+%E3%83%98%E3%83%83%E3%83%89%E3%82%BB%E3%83%83%E3%83%88"
+  icon: "headset"
 ---
 
 ![アプリ操作のイラスト](/images/category-app.svg)

@@ -11,6 +11,7 @@ featured: false
 affiliate:
   name: "ノートPC用の冷却パッドを探す"
   url: "https://www.amazon.co.jp/s?k=%E3%83%8E%E3%83%BC%E3%83%88PC+%E5%86%B7%E5%8D%B4%E3%83%91%E3%83%83%E3%83%89"
+  icon: "cooling"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-2.svg)

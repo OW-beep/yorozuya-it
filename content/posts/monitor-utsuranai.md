@@ -12,6 +12,7 @@ affiliate:
   name: "断線チェック用の予備HDMIケーブルを探す"
   note: "1本予備があると切り分けが早い"
   url: "https://www.amazon.co.jp/s?k=HDMI%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB"
+  icon: "cable"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

@@ -15,6 +15,7 @@ affiliate:
   name: "買い替え用のWi-Fiルーターを探す"
   note: "寿命の目安は5年程度です"
   url: "https://www.amazon.co.jp/s?k=Wi-Fi%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC"
+  icon: "router"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

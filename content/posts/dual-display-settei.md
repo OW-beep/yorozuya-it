@@ -11,6 +11,7 @@ featured: false
 affiliate:
   name: "デュアルディスプレイ用のサブモニターを探す"
   url: "https://www.amazon.co.jp/s?k=%E3%82%B5%E3%83%96%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC"
+  icon: "monitor"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-2.svg)

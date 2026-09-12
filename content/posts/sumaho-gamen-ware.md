@@ -11,6 +11,7 @@ featured: false
 affiliate:
   name: "再発防止に保護フィルム・耐衝撃ケースを探す"
   url: "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%9E%E3%83%9B+%E4%BF%9D%E8%AD%B7%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0"
+  icon: "case"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-3.svg)

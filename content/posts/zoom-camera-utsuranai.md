@@ -18,6 +18,7 @@ faq:
 affiliate:
   name: "映りが悪い時の外付けWebカメラを探す"
   url: "https://www.amazon.co.jp/s?k=Web%E3%82%AB%E3%83%A1%E3%83%A9"
+  icon: "camera"
 ---
 
 ![アプリ操作のイラスト](/images/category-app.svg)

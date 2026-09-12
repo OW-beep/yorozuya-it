@@ -12,6 +12,7 @@ affiliate:
   name: "バックアップ用の外付けSSD・HDDを探す"
   note: "持ち運びに強いポータブルSSDが人気です"
   url: "https://www.amazon.co.jp/s?k=%E5%A4%96%E4%BB%98%E3%81%91SSD+%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97"
+  icon: "storage"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-2.svg)

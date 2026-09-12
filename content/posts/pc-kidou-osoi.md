@@ -12,6 +12,7 @@ affiliate:
   name: "HDDからの換装用SSDを探す"
   note: "起動時間の大幅な短縮が期待できます"
   url: "https://www.amazon.co.jp/s?k=%E5%86%85%E8%94%B5SSD"
+  icon: "storage"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

@@ -10,6 +10,7 @@ tldr:
 affiliate:
   name: "増設用メモリ・換装用SSDを探す"
   url: "https://www.amazon.co.jp/s?k=%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3+%E5%A2%97%E8%A8%AD%E3%83%A1%E3%83%A2%E3%83%AA"
+  icon: "memory"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-2.svg)

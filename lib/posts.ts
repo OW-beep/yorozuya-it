@@ -33,6 +33,7 @@ export type AffiliateItem = {
   note?: string;
   url: string;
   image?: string;
+  icon?: string;
 };
 
 function slugifyHeading(text: string, usedIds: Set<string>): string {
