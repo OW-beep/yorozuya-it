@@ -36,8 +36,12 @@ export type RankedBook = {
 const ENDPOINT =
   "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701";
 
-// IT関連書籍を狙うための検索キーワード。
-const SEARCH_KEYWORD = "IT 書籍";
+// 「本・雑誌・コミック > PC・システム開発」ジャンルのID。
+// https://ranking.rakuten.co.jp/daily/101287/ で実際にIT関連書籍が
+// 並んでいることを確認済み。キーワード検索(例:「IT 書籍」)だと、
+// タブレットケースや写真集など無関係な商品も混ざってしまうため、
+// ジャンル指定に切り替えた。
+const BOOK_GENRE_ID = "101287";
 
 function amazonSearchUrl(title: string): string {
   return `https://www.amazon.co.jp/s?k=${encodeURIComponent(title)}&tag=yorozuyait-22`;
@@ -110,7 +114,7 @@ async function fetchFromRakuten(): Promise<RankedBook[]> {
   const paramsObj: Record<string, string> = {
     format: "json",
     formatVersion: "2",
-    keyword: SEARCH_KEYWORD,
+    genreId: BOOK_GENRE_ID,
     applicationId,
     accessKey,
     hits: "10",
