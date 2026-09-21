@@ -10,7 +10,7 @@ export default function BookRankingCarouselClient({
 }: {
   books: RankedBook[];
 }) {
-  const [shop, setShop] = useState<Shop>("amazon");
+  const [shop, setShop] = useState<Shop>("rakuten");
 
   return (
     <div className="max-w-5xl mx-auto px-4">

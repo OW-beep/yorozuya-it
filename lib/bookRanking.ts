@@ -23,7 +23,6 @@
 // RAKUTEN_AFFILIATE_ID … 楽天アフィリエイトのアフィリエイトID(任意、
 //                          設定するとaffiliateUrlが返るようになる)
 
-import { unstable_cache } from "next/cache";
 import { SITE_URL } from "@/lib/site";
 
 export type RankedBook = {
@@ -175,11 +174,7 @@ async function fetchFromRakuten(): Promise<RankedBook[]> {
 }
 
 // ビルド時、234ページ分すべてがこの関数を呼ぶと、同じ内容の楽天APIリクエストが
-// 大量に同時発生し、レート制限(429)にかかってしまう。unstable_cacheで
-// 「ビルド全体・サイト全体で1つの結果を共有する」ようにし、実際のAPI呼び出しは
-// 1日1回程度に抑える。
-export const getBookRanking = unstable_cache(
-  fetchFromRakuten,
-  ["book-ranking-v2"],
-  { revalidate: 60 * 60 * 24 }
-);
+// 同時発生する可能性がある。ただしfetchの`next.revalidate`によるキャッシュは
+// Next.jsのData Cacheとして機能するため、実際の重複はある程度抑えられる。
+// (unstable_cacheでの追加ラップは動作が不安定だったため取り除いた)
+export const getBookRanking = fetchFromRakuten;
