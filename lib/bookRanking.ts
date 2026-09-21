@@ -28,6 +28,8 @@
 //                          「PC・システム開発」ジャンル(101287)を使用。環境変数で
 //                          上書きも可能。
 
+import { SITE_URL } from "@/lib/site";
+
 export type RankedBook = {
   title: string;
   price: string;
@@ -128,7 +130,16 @@ export async function getBookRanking(): Promise<RankedBook[]> {
 
     const res = await fetch(
       `${RAKUTEN_RANKING_ENDPOINT}?${params.toString()}`,
-      { next: { revalidate: 3600 } } // 1時間キャッシュ
+      {
+        headers: {
+          // 楽天ウェブサービスのアプリ登録時に指定した「Allowed websites」と
+          // 一致するRefererを送らないと、403(REQUEST_CONTEXT_BODY_HTTP_REFERRER_MISSING)
+          // で拒否される。ブラウザのアドレスバーに直接URLを貼って確認する方法では
+          // Refererが送られないため、その場合はこのエラーとは別に403が出る。
+          Referer: SITE_URL,
+        },
+        next: { revalidate: 3600 }, // 1時間キャッシュ
+      }
     );
 
     if (!res.ok) {
