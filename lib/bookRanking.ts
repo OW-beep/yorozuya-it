@@ -2,32 +2,28 @@
 //
 // 「IT関連書籍トップ10」のデータ取得ロジック。
 //
-// 楽天側は「Rakuten Ichiba Item Ranking API」(無料・アプリID登録のみで利用可)を使い、
-// 指定ジャンルの実際の売れ筋ランキングをその都度取得する。
+// ⚠️ 2026年、楽天ウェブサービスは仕様変更を重ねている。以前はIchibaItem
+// Ranking API(ジャンル別ランキング)で実装していたが、ジャンルIDの特定が
+// 難しく、レスポンス構造も不安定だったため、動作実績のある
+// IchibaItem/Search API(キーワード検索)方式に切り替えた。
 //
-// ⚠️ 2026年8月18日付でRakutenウェブサービスの旧バージョンAPI(20220601等)が
-// 廃止され、新バージョン(20260701)への移行が必要になった。あわせてエンドポイントの
-// ドメイン自体も app.rakuten.co.jp/services/api/... から
-// openapi.rakuten.co.jp/ichibaranking/api/... に変更されている。
-// 参考: https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking
-//
-// Amazon側はPA-API(商品API)がAmazonアソシエイトの実績(過去30日で10件、2025年11月改定)
-// がないと申請できないため、楽天APIで取得した「本のタイトル」をそのままAmazon内検索の
-// キーワードとして使う方式にしている。これなら同じ10冊をどちらのショップでも
-// 案内でき、Amazonアソシエイトの実績が貯まり次第、こちらもAPI(Creators API)に
-// 置き換え可能。
+// 実際に動作確認が取れている仕様(2026-07-01版、他プロジェクトでの実績あり):
+// - エンドポイント: https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701
+//   (旧 app.rakuten.co.jp/services/api/... は完全停止済み)
+// - applicationIdに加えてaccessKeyが必須(クエリパラメータで送る)
+// - formatVersion=2を指定しても、レスポンスのキー名は"Items"(大文字)のままで、
+//   配列の各要素はフラットな商品情報オブジェクト({Item: {...}}のような
+//   ネストはない)。ドキュメントより実レスポンスを信用してこの形で解析する
+// - Referer/Originヘッダーは、アプリ登録時の「Allowed websites」と
+//   一致させる必要がある
 //
 // 【環境変数(Vercelのプロジェクト設定で追加してください)】
-// RAKUTEN_APP_ID       … 楽天ウェブサービスのアプリID。無料・即時発行。
-// RAKUTEN_AFFILIATE_ID … 楽天アフィリエイトのアフィリエイトID(XXXXXXX.XXXXXXXX形式)。
-// RAKUTEN_ACCESS_KEY   … 楽天ウェブサービスのアクセスキー。新バージョンAPIのアプリ
-//                          登録時にApplication IDとあわせて発行される。ランキングAPI
-//                          自体は必須ではない可能性もあるが、指定されていれば送る
-//                          安全な実装にしてある。
-// RAKUTEN_BOOK_GENRE_ID … 書籍の「コンピュータ・IT」に相当するジャンルID。未設定時は
-//                          「PC・システム開発」ジャンル(101287)を使用。環境変数で
-//                          上書きも可能。
+// RAKUTEN_APP_ID       … 楽天ウェブサービスのアプリID
+// RAKUTEN_ACCESS_KEY   … 楽天ウェブサービスのアクセスキー(必須)
+// RAKUTEN_AFFILIATE_ID … 楽天アフィリエイトのアフィリエイトID(任意、
+//                          設定するとaffiliateUrlが返るようになる)
 
+import { unstable_cache } from "next/cache";
 import { SITE_URL } from "@/lib/site";
 
 export type RankedBook = {
@@ -38,18 +34,11 @@ export type RankedBook = {
   rakutenUrl: string;
 };
 
-const RAKUTEN_APP_ID = process.env.RAKUTEN_APP_ID;
-const RAKUTEN_AFFILIATE_ID = process.env.RAKUTEN_AFFILIATE_ID;
-const RAKUTEN_ACCESS_KEY = process.env.RAKUTEN_ACCESS_KEY;
-// 「本・雑誌・コミック > PC・システム開発」ジャンルのID。
-// https://ranking.rakuten.co.jp/daily/101287/ で実際にIT関連書籍が
-// 並んでいることを確認済み。
-const RAKUTEN_BOOK_GENRE_ID = process.env.RAKUTEN_BOOK_GENRE_ID ?? "101287";
+const ENDPOINT =
+  "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701";
 
-// 新バージョン(2026-07-01)のエンドポイント。旧版(app.rakuten.co.jp/services/api/...
-// の20220601)は2026年8月18日付で廃止されている。
-const RAKUTEN_RANKING_ENDPOINT =
-  "https://openapi.rakuten.co.jp/ichibaranking/api/IchibaItem/Ranking/20260701";
+// IT関連書籍を狙うための検索キーワード。
+const SEARCH_KEYWORD = "IT 書籍";
 
 function amazonSearchUrl(title: string): string {
   return `https://www.amazon.co.jp/s?k=${encodeURIComponent(title)}&tag=yorozuyait-22`;
@@ -85,92 +74,112 @@ function getFallback(): RankedBook[] {
   }));
 }
 
-// レスポンス構造がバージョンによって異なる可能性があるため、複数の形に対応する。
-// 旧形式: { Items: [ { Item: {...} }, ... ] }
-// formatVersion=2 等での想定形式: { Items: [ {...}, ... ] }(Itemラッパーなし)
-function extractItems(data: any): any[] {
-  const raw = data?.Items ?? data?.items ?? [];
-  if (!Array.isArray(raw)) return [];
-  return raw.map((entry: any) => entry?.Item ?? entry).filter(Boolean);
+interface RawItem {
+  itemName: string;
+  itemPrice: number;
+  itemUrl: string;
+  affiliateUrl?: string;
+  mediumImageUrls?: { imageUrl: string }[] | string[];
 }
 
-function extractTitle(item: any): string | undefined {
-  return item.itemName ?? item.name ?? item.title;
+interface RakutenSearchResponse {
+  Items?: RawItem[];
+  error?: string;
+  error_description?: string;
 }
 
-function extractPrice(item: any): string {
-  const p = item.itemPrice ?? item.price;
-  return p ? `¥${Number(p).toLocaleString()}` : "";
+function extractImage(item: RawItem): string | undefined {
+  const first = item.mediumImageUrls?.[0] as
+    | { imageUrl: string }
+    | string
+    | undefined;
+  const url = typeof first === "string" ? first : first?.imageUrl;
+  return url ? url.replace(/\?.*$/, "") : undefined;
 }
 
-function extractImage(item: any): string | undefined {
-  const fromArray =
-    item.mediumImageUrls?.[0]?.imageUrl ?? item.mediumImageUrls?.[0];
-  const url = fromArray ?? item.imageUrl;
-  return typeof url === "string" ? url.replace(/\?.*$/, "") : undefined;
-}
+async function fetchFromRakuten(): Promise<RankedBook[]> {
+  const applicationId = process.env.RAKUTEN_APP_ID;
+  const accessKey = process.env.RAKUTEN_ACCESS_KEY;
 
-function extractRakutenUrl(item: any, title: string): string {
-  return item.affiliateUrl ?? item.itemUrl ?? rakutenFallbackSearchUrl(title);
-}
-
-export async function getBookRanking(): Promise<RankedBook[]> {
-  if (!RAKUTEN_APP_ID) {
+  if (!applicationId || !accessKey) {
+    console.warn(
+      "[bookRanking] RAKUTEN_APP_ID または RAKUTEN_ACCESS_KEY が未設定のため、固定リストを表示します"
+    );
     return getFallback();
   }
 
+  const paramsObj: Record<string, string> = {
+    format: "json",
+    formatVersion: "2",
+    keyword: SEARCH_KEYWORD,
+    applicationId,
+    accessKey,
+    hits: "10",
+    sort: "-reviewCount", // レビュー数の多い順=人気の目安
+  };
+  const affiliateId = process.env.RAKUTEN_AFFILIATE_ID;
+  if (affiliateId) paramsObj.affiliateId = affiliateId;
+
+  // URLSearchParamsはスペースを"+"にエンコードし、楽天側で0件になることがあるため
+  // encodeURIComponent(%20)で明示的に組み立てる
+  const query = Object.entries(paramsObj)
+    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+    .join("&");
+
   try {
-    const params = new URLSearchParams({
-      format: "json",
-      applicationId: RAKUTEN_APP_ID,
-      genreId: RAKUTEN_BOOK_GENRE_ID,
+    const res = await fetch(`${ENDPOINT}?${query}`, {
+      headers: { Referer: SITE_URL, Origin: SITE_URL },
+      next: { revalidate: 60 * 60 * 24 }, // 1日キャッシュ
     });
-    if (RAKUTEN_AFFILIATE_ID) params.set("affiliateId", RAKUTEN_AFFILIATE_ID);
-    if (RAKUTEN_ACCESS_KEY) params.set("accessKey", RAKUTEN_ACCESS_KEY);
 
-    const res = await fetch(
-      `${RAKUTEN_RANKING_ENDPOINT}?${params.toString()}`,
-      {
-        headers: {
-          // 楽天ウェブサービスのアプリ登録時に指定した「Allowed websites」と
-          // 一致するRefererを送らないと、403(REQUEST_CONTEXT_BODY_HTTP_REFERRER_MISSING)
-          // で拒否される。ブラウザのアドレスバーに直接URLを貼って確認する方法では
-          // Refererが送られないため、その場合はこのエラーとは別に403が出る。
-          Referer: SITE_URL,
-        },
-        next: { revalidate: 3600 }, // 1時間キャッシュ
-      }
-    );
-
-    if (!res.ok) {
-      const body = await res.text().catch(() => "");
-      throw new Error(`Rakuten API error: ${res.status} ${body.slice(0, 200)}`);
+    const rawText = await res.text();
+    let data: RakutenSearchResponse = {};
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      console.warn(
+        `[bookRanking] レスポンスがJSONとして解釈できませんでした。body=${rawText.slice(0, 300)}`
+      );
+      return getFallback();
     }
 
-    const data = await res.json();
-    const items = extractItems(data).slice(0, 10);
+    if (!res.ok || data.error) {
+      console.warn(
+        `[bookRanking] 検索が失敗しました。status=${res.status} error=${data.error} description=${data.error_description}`
+      );
+      return getFallback();
+    }
 
-    if (items.length === 0) throw new Error("Rakuten API returned no items");
+    if (!data.Items || data.Items.length === 0) {
+      console.warn(
+        `[bookRanking] 検索結果が0件でした。rawBody=${rawText.slice(0, 500)}`
+      );
+      return getFallback();
+    }
 
-    const books: RankedBook[] = items
-      .map((item): RankedBook | null => {
-        const title = extractTitle(item);
-        if (!title) return null;
-        return {
-          title,
-          price: extractPrice(item),
-          imageUrl: extractImage(item),
-          amazonUrl: amazonSearchUrl(title),
-          rakutenUrl: extractRakutenUrl(item, title),
-        };
-      })
-      .filter((b): b is RankedBook => b !== null);
-
-    if (books.length === 0) throw new Error("Rakuten API items had no parsable title");
+    const books: RankedBook[] = data.Items.map((item) => ({
+      title: item.itemName,
+      price: item.itemPrice
+        ? `¥${Number(item.itemPrice).toLocaleString()}`
+        : "",
+      imageUrl: extractImage(item),
+      amazonUrl: amazonSearchUrl(item.itemName),
+      rakutenUrl: item.affiliateUrl || item.itemUrl,
+    }));
 
     return books;
   } catch (err) {
-    console.error("[bookRanking] falling back to static list:", err);
+    console.warn("[bookRanking] 検索中に例外が発生しました:", err);
     return getFallback();
   }
 }
+
+// ビルド時、234ページ分すべてがこの関数を呼ぶと、同じ内容の楽天APIリクエストが
+// 大量に同時発生し、レート制限(429)にかかってしまう。unstable_cacheで
+// 「ビルド全体・サイト全体で1つの結果を共有する」ようにし、実際のAPI呼び出しは
+// 1日1回程度に抑える。
+export const getBookRanking = unstable_cache(
+  fetchFromRakuten,
+  ["book-ranking-v2"],
+  { revalidate: 60 * 60 * 24 }
+);
