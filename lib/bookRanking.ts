@@ -25,9 +25,8 @@
 //                          自体は必須ではない可能性もあるが、指定されていれば送る
 //                          安全な実装にしてある。
 // RAKUTEN_BOOK_GENRE_ID … 書籍の「コンピュータ・IT」に相当するジャンルID。未設定時は
-//                          暫定値を使用。実際のジャンルIDは楽天市場のカテゴリページ
-//                          URLや、楽天ジャンル検索APIから確認し、正しい値に
-//                          置き換えること。
+//                          「PC・システム開発」ジャンル(101287)を使用。環境変数で
+//                          上書きも可能。
 
 export type RankedBook = {
   title: string;
@@ -40,8 +39,10 @@ export type RankedBook = {
 const RAKUTEN_APP_ID = process.env.RAKUTEN_APP_ID;
 const RAKUTEN_AFFILIATE_ID = process.env.RAKUTEN_AFFILIATE_ID;
 const RAKUTEN_ACCESS_KEY = process.env.RAKUTEN_ACCESS_KEY;
-// 暫定値。要確認・要差し替え。
-const RAKUTEN_BOOK_GENRE_ID = process.env.RAKUTEN_BOOK_GENRE_ID ?? "101266";
+// 「本・雑誌・コミック > PC・システム開発」ジャンルのID。
+// https://ranking.rakuten.co.jp/daily/101287/ で実際にIT関連書籍が
+// 並んでいることを確認済み。
+const RAKUTEN_BOOK_GENRE_ID = process.env.RAKUTEN_BOOK_GENRE_ID ?? "101287";
 
 // 新バージョン(2026-07-01)のエンドポイント。旧版(app.rakuten.co.jp/services/api/...
 // の20220601)は2026年8月18日付で廃止されている。
