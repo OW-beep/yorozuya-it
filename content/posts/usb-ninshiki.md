@@ -12,6 +12,7 @@ affiliate:
   name: "ポート不足・劣化対策にUSBハブを探す"
   url: "https://www.amazon.co.jp/s?k=USB%E3%83%8F%E3%83%96"
   icon: "hub"
+  keyword: "USBハブ"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

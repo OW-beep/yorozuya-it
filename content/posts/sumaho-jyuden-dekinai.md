@@ -21,6 +21,7 @@ affiliate:
   note: "予備を1本持っておくと切り分けが早い"
   url: "https://www.amazon.co.jp/s?k=%E5%85%85%E9%9B%BB%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB"
   icon: "cable"
+  keyword: "充電ケーブル"
 ---
 
 ![PC・スマホのイラスト](/images/category-pc-2.svg)

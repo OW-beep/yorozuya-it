@@ -13,6 +13,7 @@ affiliate:
   note: "詰まったホコリの除去に"
   url: "https://www.amazon.co.jp/s?k=%E3%82%A8%E3%82%A2%E3%83%80%E3%82%B9%E3%82%BF%E3%83%BC+%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89"
   icon: "duster"
+  keyword: "エアダスター キーボード"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-3.svg)

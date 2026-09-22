@@ -11,6 +11,7 @@ affiliate:
   name: "Android向けmicroSDカードで容量を増やす"
   url: "https://www.amazon.co.jp/s?k=microSD%E3%82%AB%E3%83%BC%E3%83%89"
   icon: "sdcard"
+  keyword: "microSDカード"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

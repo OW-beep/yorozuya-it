@@ -20,6 +20,7 @@ affiliate:
   name: "切り分け用・買い替え用の外付けスピーカーを探す"
   url: "https://www.amazon.co.jp/s?k=PC%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC"
   icon: "speaker"
+  keyword: "PCスピーカー"
 ---
 
 ![PC・スマホのイラスト](/images/category-pc-2.svg)

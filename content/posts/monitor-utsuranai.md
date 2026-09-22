@@ -13,6 +13,7 @@ affiliate:
   note: "1本予備があると切り分けが早い"
   url: "https://www.amazon.co.jp/s?k=HDMI%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB"
   icon: "cable"
+  keyword: "HDMIケーブル"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc.svg)

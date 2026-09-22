@@ -19,6 +19,7 @@ affiliate:
   name: "応急用のBluetoothスピーカーを探す"
   url: "https://www.amazon.co.jp/s?k=Bluetooth%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC"
   icon: "speaker"
+  keyword: "Bluetoothスピーカー"
 ---
 
 ![PC・スマホのイラスト](/images/category-pc-3.svg)

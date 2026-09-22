@@ -20,6 +20,7 @@ affiliate:
   note: "古いPCを長く使うほどバックアップの重要性は増します"
   url: "https://www.amazon.co.jp/s?k=%E5%A4%96%E4%BB%98%E3%81%91SSD+%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97"
   icon: "storage"
+  keyword: "外付けSSD バックアップ"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-3.svg)

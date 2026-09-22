@@ -12,6 +12,7 @@ affiliate:
   name: "買い替え用のワイヤレスイヤホンを探す"
   url: "https://www.amazon.co.jp/s?k=%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3"
   icon: "headset"
+  keyword: "ワイヤレスイヤホン"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-2.svg)

@@ -12,6 +12,7 @@ affiliate:
   name: "ゲーム等の高負荷時に使えるスマホ冷却ファンを探す"
   url: "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%9E%E3%83%9B+%E5%86%B7%E5%8D%B4%E3%83%95%E3%82%A1%E3%83%B3"
   icon: "cooling"
+  keyword: "スマホ 冷却ファン"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-3.svg)

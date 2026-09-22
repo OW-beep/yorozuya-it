@@ -12,6 +12,7 @@ affiliate:
   name: "外出先の充電切れ対策にモバイルバッテリーを探す"
   url: "https://www.amazon.co.jp/s?k=PSE+%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC"
   icon: "battery"
+  keyword: "PSE モバイルバッテリー"
 ---
 
 ![PCとスマホのイラスト](/images/category-pc-3.svg)

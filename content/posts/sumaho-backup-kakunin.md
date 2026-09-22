@@ -12,6 +12,7 @@ affiliate:
   name: "クラウド容量が足りない時の外付けストレージを探す"
   url: "https://www.amazon.co.jp/s?k=microSD%E3%82%AB%E3%83%BC%E3%83%89"
   icon: "sdcard"
+  keyword: "microSDカード"
 faq:
   - q: "バックアップには何が含まれますか?写真や動画も入りますか?"
     a: "iPhone・Android共に、写真や動画は専用の設定(iCloud写真・Googleフォトのバックアップ)で個別に管理されていることが多く、端末全体のバックアップとは別に確認が必要です。この記事の手順にあわせて、写真専用の設定も確認しておくと安心です。"

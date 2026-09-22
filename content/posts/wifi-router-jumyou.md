@@ -20,6 +20,7 @@ affiliate:
   note: "サポート期限・対応規格を確認して選びましょう"
   url: "https://www.amazon.co.jp/s?k=Wi-Fi%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC"
   icon: "router"
+  keyword: "Wi-Fiルーター"
 ---
 
 ![PC・スマホのイラスト](/images/category-pc.svg)

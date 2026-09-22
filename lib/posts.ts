@@ -34,6 +34,7 @@ export type AffiliateItem = {
   url: string;
   image?: string;
   icon?: string;
+  keyword?: string; // 楽天商品検索に使う検索語(未指定時はnameを使用)
 };
 
 function slugifyHeading(text: string, usedIds: Set<string>): string {
