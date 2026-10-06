@@ -11,6 +11,9 @@ export default function SiteHeader() {
         <Link href="/tools/teishutsu-check" className="text-yamabuki hover:text-yamabuki-deep font-bold">
           ファイル診断
         </Link>
+        <Link href="/tools/ai-paste-check" className="text-yamabuki hover:text-yamabuki-deep font-bold">
+          AI貼る前チェック
+        </Link>
         <Link href="/posts" className="text-washi/75 hover:text-washi">
           記事一覧
         </Link>

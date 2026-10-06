@@ -1,8 +1,8 @@
 ---
-title: "スマホのバックアップ、本当に取れてる?最終バックアップ日時の確認方法"
+title: "スマホのバックアップ確認方法|iPhone・Androidで最終日時を見る手順"
 category: "PC・スマホ"
 date: "2026-07-30"
-excerpt: "「たぶん自動でバックアップされているはず」は危険信号。iPhone・Android別に、最終バックアップ日時を今すぐ確認する手順をまとめました。"
+excerpt: "「設定している=取れている」とは限りません。iPhone(iCloud)とAndroid(Google)で最終バックアップ日時を確認する手順と、止まっている時の原因をまとめました。"
 featured: true
 tldr:
   - "iPhoneは「設定」→自分の名前→iCloudから最終バックアップ日時を確認する"
