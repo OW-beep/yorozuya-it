@@ -9,7 +9,7 @@ function pickTopic(slug: string, category: string): {
   body: string;
   label: string;
 } {
-  if (/(^|-)(ai|prompt|generative|governance|agentic|llm|hallucination|deepfake)(-|$)/.test(slug)) {
+  if (/(^|-)(ai|prompt|generative|governance|agentic|llm|hallucination)(-|$)/.test(slug)) {
     return {
       key: "ai",
       heading: "AIの使い方・社内ルールでお悩みですか?",

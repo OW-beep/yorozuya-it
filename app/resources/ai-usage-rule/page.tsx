@@ -141,6 +141,12 @@ export default function AiUsageRulePage() {
             :貼る前に、個人情報や社外秘の記載を機械的に検出します
           </li>
           <li>
+            <Link href="/ai-practice" className="text-yamabuki-deep underline">
+              AI・プログラミング実務ガイド
+            </Link>
+            :AIの使い方・確認のしかたをまとめたシリーズ
+          </li>
+          <li>
             <Link href="/posts/shadow-ai-toha" className="text-yamabuki-deep underline">
               シャドーAIとは
             </Link>

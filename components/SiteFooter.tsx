@@ -8,6 +8,9 @@ export default function SiteFooter() {
         <Link href="/posts" className="hover:text-ink">
           記事一覧
         </Link>
+        <Link href="/ai-practice" className="hover:text-ink">
+          AI・プログラミング実務
+        </Link>
         <Link href="/sitemap" className="hover:text-ink">
           サイトマップ
         </Link>

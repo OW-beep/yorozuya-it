@@ -12,6 +12,7 @@ import ConclusionBox from "@/components/ConclusionBox";
 import PostFooterNav from "@/components/PostFooterNav";
 import AffiliateBanner from "@/components/AffiliateBanner";
 import ConsultCta from "@/components/ConsultCta";
+import SeriesBox from "@/components/SeriesBox";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -145,6 +146,8 @@ export default async function PostPage({
       <ShareButtons slug={post!.slug} title={post!.title} />
 
       <FaqSection items={post!.faq} />
+
+      <SeriesBox slug={post!.slug} />
 
       <ConsultCta slug={post!.slug} category={post!.category} />
 
