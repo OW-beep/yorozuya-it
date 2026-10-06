@@ -26,21 +26,21 @@ export const PURPOSE_LABELS: Record<SubmissionPurpose, string> = {
   other: "その他",
 };
 
-const PII_PATTERNS: { label: string; regex: RegExp }[] = [
+export const PII_PATTERNS: { label: string; regex: RegExp }[] = [
   { label: "メールアドレス", regex: /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/g },
   { label: "電話番号らしき文字列", regex: /0\d{1,4}-\d{1,4}-\d{3,4}/g },
-  { label: "郵便番号らしき文字列", regex: /〒?\d{3}-\d{4}/g },
+  { label: "郵便番号らしき文字列", regex: /〒\s?\d{3}-\d{4}|(?<![\d-])\d{3}-\d{4}(?![\d-])/g },
   { label: "クレジットカード番号らしき文字列", regex: /\b(?:\d[ -]?){13,16}\b/g },
   { label: "マイナンバーらしき文字列(12桁)", regex: /\b\d{4}\s?\d{4}\s?\d{4}\b/g },
   { label: "IPアドレスらしき文字列", regex: /\b(?:\d{1,3}\.){3}\d{1,3}\b/g },
 ];
 
-function getText(xml: string, tag: string): string | null {
+export function getText(xml: string, tag: string): string | null {
   const m = xml.match(new RegExp(`<${tag}[^>]*>([^<]*)</${tag}>`));
   return m ? m[1] : null;
 }
 
-function countMatches(regex: RegExp, text: string): number {
+export function countMatches(regex: RegExp, text: string): number {
   const m = text.match(regex);
   return m ? m.length : 0;
 }

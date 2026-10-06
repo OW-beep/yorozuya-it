@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/posts/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated || post.date),
     changeFrequency: "monthly",
     priority: 0.7,
   }));
@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/posts`, changeFrequency: "daily", priority: 0.9 },
     { url: `${SITE_URL}/tools/teishutsu-check`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/tools/ai-paste-check`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/services`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/resources/ai-usage-rule`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/about`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/editorial-policy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },

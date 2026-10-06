@@ -2,9 +2,9 @@ import Link from "next/link";
 import SubmissionCheckTool from "@/components/SubmissionCheckTool";
 
 export const metadata = {
-  title: "提出前ファイル診断(Excel) - そのファイル、そのまま送って大丈夫?",
+  title: "提出前ファイル診断(Excel・Word・PowerPoint) - そのファイル、そのまま送って大丈夫?",
   description:
-    "Excelファイルに残っている非表示シート・作成者情報・個人情報らしき文字列・外部リンクなどを、送信前にブラウザ上で無料チェックできます。ファイルはサーバーに送信されません。",
+    "Excel・Word・PowerPointに残っている非表示シート・変更履歴・発表者ノート・コメント・作成者情報・個人情報らしき文字列などを、送信前にブラウザ上で無料チェックできます。ファイルはサーバーに送信されません。",
 };
 
 export default function TeishutsuCheckPage() {
@@ -22,7 +22,7 @@ export default function TeishutsuCheckPage() {
           そのファイル、そのまま送って大丈夫?
         </h1>
         <p className="text-sm text-ink-soft leading-relaxed">
-          Excelファイルの中には、画面上は見えなくても「非表示シート」「作成者の名前」「コメント」「個人情報らしき文字列」などが残っていることがあります。
+          Excel・Word・PowerPointのファイルには、画面上は見えなくても「非表示シート・スライド」「変更履歴」「発表者ノート」「作成者の名前」「コメント」などが残っていることがあります。
           <br />
           社外・取引先・自治体などへ提出する前に、ブラウザ上で無料チェックできます。
         </p>
@@ -35,7 +35,7 @@ export default function TeishutsuCheckPage() {
           このツールについて
         </h2>
         <p>
-          現在は試験提供中(β版)で、対応形式はExcel(.xlsx)のみです。Word・PowerPoint・PDFなど他形式への対応は今後追加予定です。
+          現在は試験提供中(β版)で、対応形式はExcel(.xlsx)・Word(.docx)・PowerPoint(.pptx)です。古い形式(.xls / .doc / .ppt)とPDFには対応していません。
         </p>
         <p>
           検査項目は、Microsoft社の「ドキュメント検査」機能などで案内されている項目を参考に、提出・共有という利用場面に合わせて整理したものです。マイクロソフト公式のドキュメント検査機能については、

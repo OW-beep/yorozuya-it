@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { CONTACT_EMAIL, FORMSPREE_FORM_ID } from "@/lib/site";
+import { INQUIRY_TYPES } from "@/lib/services";
 
-export default function ContactForm() {
+export default function ContactForm({ defaultType = "" }: { defaultType?: string }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
@@ -85,16 +86,17 @@ export default function ContactForm() {
           id="inquiryType"
           name="inquiryType"
           required
-          defaultValue=""
+          defaultValue={INQUIRY_TYPES.includes(defaultType) ? defaultType : ""}
           className="w-full border border-ink/15 bg-washi px-3 py-2.5 text-sm focus:outline-none focus:border-yamabuki-deep"
         >
           <option value="" disabled>
             選択してください
           </option>
-          <option value="記事内容の誤り・ご質問">記事内容の誤り・ご質問</option>
-          <option value="データ分析のご依頼">データ分析のご依頼</option>
-          <option value="IT活用に関するご相談">IT活用に関するご相談</option>
-          <option value="その他">その他</option>
+          {INQUIRY_TYPES.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
         </select>
       </div>
       <div>

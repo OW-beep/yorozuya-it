@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import { analyzeOffice, detectKind, KIND_LABELS } from "@/lib/officeAnalyzer";
 import {
-  analyzeXlsx,
   Finding,
   RiskLevel,
   SubmissionPurpose,
@@ -32,9 +32,9 @@ export default function SubmissionCheckTool() {
     setError(null);
     setFindings(null);
 
-    if (!/\.xlsx$/i.test(file.name)) {
+    if (!detectKind(file.name)) {
       setError(
-        "現在は Excel(.xlsx)形式のみに対応しています。古い形式(.xls)は非対応です。"
+        "Excel(.xlsx)・Word(.docx)・PowerPoint(.pptx)に対応しています。古い形式(.xls / .doc / .ppt)やPDFは非対応です。"
       );
       return;
     }
@@ -46,7 +46,7 @@ export default function SubmissionCheckTool() {
     setFileName(file.name);
     setLoading(true);
     try {
-      const result = await analyzeXlsx(file);
+      const result = await analyzeOffice(file);
       setFindings(result);
     } catch (e) {
       setError(
@@ -139,7 +139,7 @@ export default function SubmissionCheckTool() {
           <input
             ref={inputRef}
             type="file"
-            accept=".xlsx"
+            accept=".xlsx,.docx,.pptx"
             className="hidden"
             onChange={(e) => {
               const file = e.target.files?.[0];
@@ -147,7 +147,7 @@ export default function SubmissionCheckTool() {
             }}
           />
           <p className="text-sm text-ink mb-2">
-            Excelファイル(.xlsx)をここにドラッグ&ドロップ
+            Excel・Word・PowerPointファイル(.xlsx / .docx / .pptx)をここにドラッグ&ドロップ
           </p>
           <p className="text-xs text-ink-soft mb-4">または、クリックしてファイルを選択</p>
           <span className="inline-block text-xs px-4 py-2 rounded bg-indigo text-washi">
@@ -175,7 +175,10 @@ export default function SubmissionCheckTool() {
         <div className="mt-2">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <p className="text-xs text-ink-soft">{fileName}</p>
+              <p className="text-xs text-ink-soft">
+                {fileName}
+                {fileName && detectKind(fileName) ? `(${KIND_LABELS[detectKind(fileName)!]})` : ""}
+              </p>
               {purpose && (
                 <p className="text-xs text-ink-soft">
                   提出先: {PURPOSE_LABELS[purpose]}
@@ -206,7 +209,7 @@ export default function SubmissionCheckTool() {
 
           {findings.length === 0 && (
             <p className="text-sm text-ink-soft">
-              非表示シート・個人情報候補・作成者情報などは検出されませんでした。ただし、これはあくまで機械的なチェックです。送付前には内容そのものもあわせてご確認ください。
+              非表示の内容・個人情報候補・作成者情報などは検出されませんでした。ただし、これはあくまで機械的なチェックです。送付前には内容そのものもあわせてご確認ください。
             </p>
           )}
 
@@ -246,7 +249,7 @@ export default function SubmissionCheckTool() {
           </div>
 
           <p className="text-xs text-ink-soft mt-6">
-            ※ このツールはExcelファイルの構造を機械的に検査するもので、内容の安全性を保証するものではありません。最終的な確認は、必ずご自身の目でも行ってください。非表示シートや外部リンクなど、削除によってファイルの計算結果が変わる可能性がある項目は、自動では変更していません。
+            ※ このツールはOfficeファイルの構造を機械的に検査するもので、内容の安全性を保証するものではありません。最終的な確認は、必ずご自身の目でも行ってください。ファイルの内容は自動では変更していません(Excelの非表示シートや外部リンクなど、削除によって計算結果が変わる可能性がある項目を含みます)。
           </p>
 
         </div>

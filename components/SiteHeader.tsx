@@ -26,6 +26,12 @@ export default function SiteHeader() {
             {cat.label}
           </Link>
         ))}
+        <Link
+          href="/services"
+          className="border border-yamabuki text-yamabuki hover:bg-yamabuki hover:text-indigo-deep px-3 py-1 rounded font-bold"
+        >
+          ご相談
+        </Link>
       </nav>
     </header>
   );

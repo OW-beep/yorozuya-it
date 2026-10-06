@@ -11,6 +11,7 @@ import ArticleByline from "@/components/ArticleByline";
 import ConclusionBox from "@/components/ConclusionBox";
 import PostFooterNav from "@/components/PostFooterNav";
 import AffiliateBanner from "@/components/AffiliateBanner";
+import ConsultCta from "@/components/ConsultCta";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -144,6 +145,8 @@ export default async function PostPage({
       <ShareButtons slug={post!.slug} title={post!.title} />
 
       <FaqSection items={post!.faq} />
+
+      <ConsultCta slug={post!.slug} category={post!.category} />
 
       {related.length > 0 && (
         <section className="mt-16 pt-10 border-t border-ink/10">
