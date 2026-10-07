@@ -27,6 +27,11 @@ export const AI_PRACTICE_GROUPS: SeriesGroup[] = [
     slugs: ["shadow-ai-taisaku", "shadow-ai-toha", "ai-governance-toha", "deepfake-koe-honnin-kakunin"],
   },
   {
+    title: "AIの仕組みとリスク",
+    lead: "AIが資料を踏まえて答える仕組み(RAG)と、AIに悪意ある指示を紛れ込ませる攻撃のしくみです。",
+    slugs: ["rag-toha", "prompt-injection-toha", "context-window-toha", "token-toha"],
+  },
+  {
     title: "AIの導入と業務の自動化",
     lead: "「入れればすぐ効率化する」という期待とのつきあい方と、任せる範囲の決め方です。",
     slugs: ["ai-donyu-gokai", "ai-agent-rpa-tsukaiwake-jitsumu", "agentic-ai-rpa-chigai"],

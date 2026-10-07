@@ -86,3 +86,5 @@ faq:
 - [ランサムウェア対策特設ページ - IPA 独立行政法人 情報処理推進機構](https://www.ipa.go.jp/security/anshin/measures/ransom_tokusetsu.html)
 
 ※ 手口や対策は日々更新されるため、最新の注意喚起情報は上記の公式ページもあわせてご確認ください。
+
+関連記事:[RTO・RPOとは(復旧の目標を決める指標)](/posts/rto-rpo-toha)

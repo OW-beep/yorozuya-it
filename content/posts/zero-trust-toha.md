@@ -66,3 +66,5 @@ faq:
 - [テレワークにおけるセキュリティ確保 - 総務省](https://www.soumu.go.jp/main_sosiki/cybersecurity/telework/)
 
 ※ 内容は変化することがあるため、最新の情報は上記の公式ページもあわせてご確認ください。
+
+関連記事:[最小権限の原則とは](/posts/least-privilege-toha)
