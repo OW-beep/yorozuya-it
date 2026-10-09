@@ -114,6 +114,11 @@ export default function ServicesPage({
             </Link>
           </li>
           <li>
+            <Link href="/posts/shihyou-teigisho-tsukurikata" className="text-yamabuki-deep underline">
+              指標の定義書テンプレート(Excel)
+            </Link>
+          </li>
+          <li>
             <Link href="/tools/teishutsu-check" className="text-yamabuki-deep underline">
               提出前ファイル診断(Excel・Word・PowerPoint)
             </Link>
