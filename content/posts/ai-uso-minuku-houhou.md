@@ -152,3 +152,5 @@ AIは、**調査の出発点**としては、とても便利です。そこか�
 - 確認するのは重要な部分だけでよい
 
 AIへの頼み方そのものを見直したい方は、[ChatGPTに何を聞けばいいか分からない時の対処法](/posts/ai-shitsumon-omoitsukanai)もあわせてどうぞ。
+
+関連記事:[AIの回答が毎回違うのはなぜ?](/posts/ai-kaitou-maikai-chigau)

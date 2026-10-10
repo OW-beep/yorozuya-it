@@ -117,3 +117,5 @@ AIが出した式は、いきなり本番のファイルで使わず、次の順
 - マクロは、**実行前に何をするかを説明してもらう**
 
 Excelでつまずきやすい点は、[Excel初心者がよくつまずくポイント](/posts/excel-beginner-tsumazuki)にもまとめています。AIの回答を確認する習慣については、[AIの嘘を見抜く5つの方法](/posts/ai-uso-minuku-houhou)も参考にしてください。また、ファイルを他の人に送る前の確認には、[提出前ファイル診断](/tools/teishutsu-check)が使えます。
+
+関連記事:[Excelで数字が文字列になっている時の直し方](/posts/excel-moji-suuji-henkan)

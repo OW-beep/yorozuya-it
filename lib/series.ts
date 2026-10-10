@@ -17,6 +17,7 @@ export const AI_PRACTICE_GROUPS: SeriesGroup[] = [
       "ai-katsuyou-jissen",
       "prompt-engineering-toha",
       "ai-gijiroku-anzen-seiri",
+      "ai-kaitou-maikai-chigau",
       "hallucination-toha",
       "generative-ai-toha",
     ],
@@ -24,7 +25,7 @@ export const AI_PRACTICE_GROUPS: SeriesGroup[] = [
   {
     title: "安全に使うためのルール",
     lead: "入力してよい情報・いけない情報の線引きと、組織でのルールづくりです。",
-    slugs: ["shadow-ai-taisaku", "shadow-ai-toha", "ai-governance-toha", "deepfake-koe-honnin-kakunin"],
+    slugs: ["shadow-ai-taisaku", "ai-file-screenshot-hari-mae", "shadow-ai-toha", "ai-governance-toha", "deepfake-koe-honnin-kakunin"],
   },
   {
     title: "AIの仕組みとリスク",
@@ -41,7 +42,9 @@ export const AI_PRACTICE_GROUPS: SeriesGroup[] = [
     lead: "動くだけで安心せず、確認してから使うための手順をまとめています。",
     slugs: [
       "excel-ai-kansu-kakaseru-kotsu",
+      "excel-moji-suuji-henkan",
       "excel-beginner-tsumazuki",
+      "api-renkei-tsunagaranai-kakunin",
       "ai-code-sonomama-tsukawanai",
     ],
   },

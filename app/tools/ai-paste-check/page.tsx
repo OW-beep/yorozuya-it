@@ -77,6 +77,11 @@ export default function AiPasteCheckPage() {
             </Link>
           </li>
           <li>
+            <Link href="/posts/ai-file-screenshot-hari-mae" className="text-yamabuki-deep underline">
+              AIにファイルやスクリーンショットを渡す前に確認したい5つのこと
+            </Link>
+          </li>
+          <li>
             <Link href="/tools/teishutsu-check" className="text-yamabuki-deep underline">
               提出前ファイル診断(Excel)
             </Link>
