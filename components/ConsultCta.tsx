@@ -34,7 +34,7 @@ function pickTopic(slug: string, category: string): {
     };
   }
   if (
-    /(security|phishing|password|backup|ransom|vpn|firewall|account|passkey|2dankai|sagi|oauth|cookie|zero-?trust|update|malware|virus)/.test(
+    /(security|phishing|password|backup|ransom|vpn|firewall|account|passkey|2dankai|sagi|oauth|cookie|zero-?trust|update|malware|virus|ryuushutsu)/.test(
       slug
     ) ||
     category === "トレンド"

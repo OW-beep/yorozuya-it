@@ -112,3 +112,7 @@ Google検索ヘルプでは、フィッシングサイトを見つけた場合�
 - [フィッシング対策協議会 消費者の皆様へ](https://www.antiphishing.jp/consumer/)
 
 ※ 手口や対策は変化し続けているため、最新の状況は上記の公式ページもあわせてご確認ください。
+
+関連記事:[巧妙なフィッシングメールは見分けられない前提で|「開かない」仕組みの作り方](/posts/phishing-mail-hirakanai-shikumi)
+
+関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)

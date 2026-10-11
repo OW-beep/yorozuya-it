@@ -83,3 +83,7 @@ faq:
 - [パスキーのパスワードレス認証 - Google セーフティセンター](https://safety.google/intl/ja/authentication/passkey/)
 
 ※ 対応状況やUIはサービスごとに更新されることがあるため、最新の内容は各サービスの公式ヘルプもあわせてご確認ください。
+
+関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
+
+関連記事:[自分の情報が流出したと通知が来たら](/posts/kojin-joho-ryuushutsu-shirasete-kita-toki)

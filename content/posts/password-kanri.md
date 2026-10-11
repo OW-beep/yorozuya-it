@@ -97,3 +97,7 @@ faq:
 - [安全なパスワード管理 - 総務省 国民のためのサイバーセキュリティサイト](https://www.soumu.go.jp/main_sosiki/cybersecurity/kokumin/business/business_staff_01.html)
 
 ※ ガイドラインは見直されることがあるため、最新の内容は上記の公式ページもあわせてご確認ください。
+
+関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
+
+関連記事:[個人情報流出から自分を守る7つの予防策](/posts/kojin-joho-ryuushutsu-kojin-taisaku)

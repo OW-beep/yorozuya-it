@@ -45,3 +45,5 @@ Macの場合は「command + option + esc」で強制終了メニューが呼び�
 ## 頻繁にフリーズする場合
 
 月に何度もフリーズが起きる場合は、メモリ不足や、ハードディスク・SSDの劣化のサインである可能性があります。パソコン内部の空き容量の確認や、専門店での診断も検討してみてください。[増設用メモリ](https://www.amazon.co.jp/s?k=%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3+%E5%A2%97%E8%A8%AD%E3%83%A1%E3%83%A2%E3%83%AA&tag=yorozuyait-22)や[SSD](https://www.amazon.co.jp/s?k=%E5%86%85%E8%94%B5SSD&tag=yorozuyait-22)への交換で改善するケースもあります。
+
+関連記事:[パソコンの調子がおかしい時の切り分け手順](/posts/pc-choshi-okashii-kirisake)

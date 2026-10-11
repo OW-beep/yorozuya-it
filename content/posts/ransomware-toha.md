@@ -88,3 +88,5 @@ faq:
 ※ 手口や対策は日々更新されるため、最新の注意喚起情報は上記の公式ページもあわせてご確認ください。
 
 関連記事:[RTO・RPOとは(復旧の目標を決める指標)](/posts/rto-rpo-toha)
+
+関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)

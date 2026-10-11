@@ -72,3 +72,5 @@ VPNは「通信の安全な専用トンネル」というイメージで理解�
 - [無線LAN(Wi-Fi)の安全な利用について - 総務省](https://www.soumu.go.jp/main_sosiki/cybersecurity/wi-fi/)
 
 ※ 内容は変化することがあるため、最新の情報は上記の公式ページもあわせてご確認ください。
+
+関連記事:[VPNは繋がったのに、社内システムが開けない時の確認手順](/posts/vpn-tsunagatta-shanai-mienai)

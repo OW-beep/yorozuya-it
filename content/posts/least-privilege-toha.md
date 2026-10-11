@@ -151,3 +151,5 @@ faq:
 - まずは**棚卸し**から始め、**定期的に見直す**
 
 関連記事:[データガバナンスとは](/posts/data-governance-toha)
+
+関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
