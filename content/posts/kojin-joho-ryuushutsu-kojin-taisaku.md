@@ -131,7 +131,16 @@ faq:
 - [なぜ今、個人情報の流出が相次いでいるのか(分かっていること・まだ分からないこと)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
 - [個人情報の流出はなぜ起きるのか(5つの入口)](/posts/kojin-joho-ryuushutsu-naze-okiru)
 - [自分の情報が流出したと通知が来たら(最初の24時間)](/posts/kojin-joho-ryuushutsu-shirasete-kita-toki)
+- [自分の個人情報が流出したか確認する方法](/posts/ryuushutsu-kakunin-houhou)
+- [運転免許証の画像が流出したら?なりすましを防ぐ5つの対処](/posts/menkyosho-gazou-ryuushutsu-taisho)
 - [個人情報を漏らさないための点検リスト(組織向け)](/posts/kojin-joho-ryuushutsu-kigyo-tenken)
+
+### 関連する用語
+
+- [リスト型攻撃(クレデンシャルスタッフィング)とは](/posts/credential-stuffing-toha)
+- [サプライチェーン攻撃とは](/posts/supply-chain-attack-toha)
+- [SQLインジェクションとは](/posts/sql-injection-toha)
+- [Webシェルとは](/posts/web-shell-toha)
 
 ## 参考にした情報
 

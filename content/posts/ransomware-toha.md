@@ -90,3 +90,5 @@ faq:
 関連記事:[RTO・RPOとは(復旧の目標を決める指標)](/posts/rto-rpo-toha)
 
 関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
+
+関連記事:[Webシェルとは](/posts/web-shell-toha)
