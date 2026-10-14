@@ -1,7 +1,8 @@
 ---
 title: "リスト型攻撃(クレデンシャルスタッフィング)とは?流出したIDとパスワードが他のサービスで悪用される仕組み"
 category: "用語辞典"
-date: "2026-10-10"
+date: "2026-10-14"
+updated: "2026-10-14"
 excerpt: "リスト型攻撃は、他のサービスで流出したIDとパスワードの組み合わせを使って、別のサービスに自動でログインを試みる攻撃です。パスワードの使い回しが危険な理由、個人と企業ができる対策を、たとえ話で解説します。"
 featured: false
 tldr:
@@ -105,3 +106,5 @@ faq:
 2026年10月の流出の背景は、[なぜ今、個人情報の流出が相次いでいるのか](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)で整理しています。
 
 関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)、[個人情報の流出はなぜ起きるのか](/posts/kojin-joho-ryuushutsu-naze-okiru)
+
+関連記事:[個人情報流出 2026年10月の主な事案|パスワード変更は必要?早見表](/posts/ryuushutsu-jian-hayami-hyo-2026-10)

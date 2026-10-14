@@ -118,3 +118,5 @@ Google検索ヘルプでは、フィッシングサイトを見つけた場合�
 関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
 
 関連記事:[運転免許証の画像が流出したら?なりすましを防ぐ5つの対処](/posts/menkyosho-gazou-ryuushutsu-taisho)
+
+関連記事:[個人情報流出 2026年10月の主な事案|パスワード変更は必要?早見表](/posts/ryuushutsu-jian-hayami-hyo-2026-10)

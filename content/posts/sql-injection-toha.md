@@ -1,7 +1,8 @@
 ---
 title: "SQLインジェクションとは?入力欄から、データベースを不正に操作する攻撃と対策"
 category: "用語辞典"
-date: "2026-10-10"
+date: "2026-10-14"
+updated: "2026-10-14"
 excerpt: "SQLインジェクションは、入力欄などに不正な命令を紛れ込ませて、データベースを意図しない形で操作する攻撃です。たとえ話での仕組み、起こり得る被害、プレースホルダなどの開発側の対策、利用者にできることを、やさしく解説します。"
 featured: false
 tldr:
@@ -104,3 +105,5 @@ SQLインジェクションを、利用者が、直接防ぐことはできま�
 AIに対する、似た構造の攻撃は、[プロンプトインジェクションとは](/posts/prompt-injection-toha)で解説しています。
 
 関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)、[個人情報の流出はなぜ起きるのか](/posts/kojin-joho-ryuushutsu-naze-okiru)
+
+関連記事:[個人情報流出 2026年10月の主な事案|パスワード変更は必要?早見表](/posts/ryuushutsu-jian-hayami-hyo-2026-10)

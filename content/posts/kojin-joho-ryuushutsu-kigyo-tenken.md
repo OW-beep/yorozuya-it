@@ -1,8 +1,8 @@
 ---
 title: "個人情報を漏らさないための点検リスト|JPCERT/CC・個人情報保護委員会の注意喚起から"
 category: "トレンド"
-date: "2026-10-10"
-updated: "2026-10-10"
+date: "2026-10-14"
+updated: "2026-10-14"
 excerpt: "2026年10月、JPCERT/CCと個人情報保護委員会が相次いで注意喚起を出しました。そこで挙げられた対策を、組織が今週から確認できる点検リストにまとめます。想定していない公開、API、アクセス権限、脆弱性、委託先、ログ、データの持ちすぎまで、順番に確認します。"
 featured: false
 tldr:
@@ -26,7 +26,7 @@ faq:
 
 ![セキュリティのイラスト](/images/category-trend-2.svg)
 
-> ※この記事は、2026年10月10日時点の公表情報にもとづく、一般的な点検の整理です。個別の状況に応じた判断は、専門家にご相談ください。
+> ※この記事は、2026年10月14日時点の公表情報にもとづく、一般的な点検の整理です。個別の状況に応じた判断は、専門家にご相談ください。
 
 ## 注意喚起が、組織に求めていること
 
@@ -147,16 +147,25 @@ JPCERT/CCは、侵害が疑われる場合の、相談や情報提供も受け�
 
 ## この特集の記事(個人情報流出)
 
-- [なぜ今、個人情報の流出が相次いでいるのか(分かっていること・まだ分からないこと)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
+- [個人情報流出 2026年10月の主な事案|パスワード変更は必要?早見表](/posts/ryuushutsu-jian-hayami-hyo-2026-10)
+- [自治体の防災メール登録情報が流出のおそれ(登録者がやること)](/posts/jichitai-bosai-mail-ryuushutsu-toroku-sha)
+- [なぜ今、個人情報の流出が相次いでいるのか](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
 - [個人情報の流出はなぜ起きるのか(5つの入口)](/posts/kojin-joho-ryuushutsu-naze-okiru)
 - [自分の情報が流出したと通知が来たら(最初の24時間)](/posts/kojin-joho-ryuushutsu-shirasete-kita-toki)
 - [自分の個人情報が流出したか確認する方法](/posts/ryuushutsu-kakunin-houhou)
+- [「パスワードは流出していない」と言われたら、パスワード変更は必要?](/posts/password-ryuushutsu-shiteinai-henkou)
+- [メールアドレスと電話番号が流出したら、何をされる?](/posts/mail-denwa-ryuushutsu-nani-sareru)
+- [流出後の「お詫び」「補償」の連絡は本物?](/posts/ryuushutsu-owabi-hoshou-sagi)
 - [運転免許証の画像が流出したら?なりすましを防ぐ5つの対処](/posts/menkyosho-gazou-ryuushutsu-taisho)
 - [個人情報流出から自分を守る7つの予防策](/posts/kojin-joho-ryuushutsu-kojin-taisaku)
+- [使っていないアカウントの探し方と退会の手順](/posts/furui-account-sagashikata-taikai)
+- [メールアドレスの使い分け方](/posts/mail-address-tsukaiwake)
+- [二段階認証はSMS・認証アプリ・パスキーのどれがいい?](/posts/nidan-ninsho-sms-app-passkey-hikaku)
 
 ### 関連する用語
 
 - [リスト型攻撃(クレデンシャルスタッフィング)とは](/posts/credential-stuffing-toha)
+- [ハッシュ化されたパスワードが流出したら](/posts/hash-password-ryuushutsu-toha)
 - [サプライチェーン攻撃とは](/posts/supply-chain-attack-toha)
 - [SQLインジェクションとは](/posts/sql-injection-toha)
 - [Webシェルとは](/posts/web-shell-toha)

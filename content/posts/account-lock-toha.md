@@ -74,3 +74,7 @@ faq:
 ※ 各サービスの仕様は変更されることがあるため、最新の情報は各サービスの公式ヘルプもあわせてご確認ください。
 
 関連記事:[最小権限の原則とは](/posts/least-privilege-toha)
+
+関連記事:[個人情報流出 2026年10月の主な事案|パスワード変更は必要?早見表](/posts/ryuushutsu-jian-hayami-hyo-2026-10)
+
+関連記事:[使っていないアカウントの探し方と退会の手順](/posts/furui-account-sagashikata-taikai)

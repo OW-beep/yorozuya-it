@@ -1,8 +1,8 @@
 ---
 title: "自分の個人情報が流出したか確認する方法|公式発表・通知・パスワードチェックの使い方"
 category: "PC・スマホ"
-date: "2026-10-10"
-updated: "2026-10-10"
+date: "2026-10-14"
+updated: "2026-10-14"
 excerpt: "流出のニュースを見て、「自分の情報も漏れているのでは」と不安になった時に、何を見ればよいのか。公式の発表と通知の確認、ブラウザやスマホのパスワード漏えいチェック、メールアドレスの確認サービス、不審な兆候まで、確認の順番と、できないことを整理します。"
 featured: false
 tldr:
@@ -27,7 +27,7 @@ faq:
 
 ![セキュリティのイラスト](/images/category-pc-3.svg)
 
-> ※この記事は、2026年10月10日時点の一般的な情報にもとづいています。サービスの名称や画面は、変更されることがあります。
+> ※この記事は、2026年10月14日時点の一般的な情報にもとづいています。サービスの名称や画面は、変更されることがあります。
 
 ## 「自分も、対象かもしれない」
 
@@ -120,24 +120,42 @@ faq:
 
 運転免許証など、本人確認書類の画像が流出した場合は、[運転免許証の画像が流出したら?なりすましを防ぐ5つの対処](/posts/menkyosho-gazou-ryuushutsu-taisho)をご覧ください。
 
+### 関連する用語
+
+- [リスト型攻撃(クレデンシャルスタッフィング)とは](/posts/credential-stuffing-toha)
+- [サプライチェーン攻撃とは](/posts/supply-chain-attack-toha)
+- [SQLインジェクションとは](/posts/sql-injection-toha)
+- [Webシェルとは](/posts/web-shell-toha)
+
+### 関連する用語
+
+- [リスト型攻撃(クレデンシャルスタッフィング)とは](/posts/credential-stuffing-toha)
+- [ハッシュ化されたパスワードが流出したら](/posts/hash-password-ryuushutsu-toha)
+- [サプライチェーン攻撃とは](/posts/supply-chain-attack-toha)
+- [SQLインジェクションとは](/posts/sql-injection-toha)
+- [Webシェルとは](/posts/web-shell-toha)
+
 ## この特集の記事(個人情報流出)
 
-- [なぜ今、個人情報の流出が相次いでいるのか(分かっていること・まだ分からないこと)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
-- [自分の情報が流出したと通知が来たら(最初の24時間)](/posts/kojin-joho-ryuushutsu-shirasete-kita-toki)
-- [運転免許証の画像が流出したら?なりすましを防ぐ5つの対処](/posts/menkyosho-gazou-ryuushutsu-taisho)
-
-## この特集の記事(個人情報流出)
-
-- [なぜ今、個人情報の流出が相次いでいるのか(分かっていること・まだ分からないこと)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
+- [個人情報流出 2026年10月の主な事案|パスワード変更は必要?早見表](/posts/ryuushutsu-jian-hayami-hyo-2026-10)
+- [自治体の防災メール登録情報が流出のおそれ(登録者がやること)](/posts/jichitai-bosai-mail-ryuushutsu-toroku-sha)
+- [なぜ今、個人情報の流出が相次いでいるのか](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
 - [個人情報の流出はなぜ起きるのか(5つの入口)](/posts/kojin-joho-ryuushutsu-naze-okiru)
 - [自分の情報が流出したと通知が来たら(最初の24時間)](/posts/kojin-joho-ryuushutsu-shirasete-kita-toki)
+- [「パスワードは流出していない」と言われたら、パスワード変更は必要?](/posts/password-ryuushutsu-shiteinai-henkou)
+- [メールアドレスと電話番号が流出したら、何をされる?](/posts/mail-denwa-ryuushutsu-nani-sareru)
+- [流出後の「お詫び」「補償」の連絡は本物?](/posts/ryuushutsu-owabi-hoshou-sagi)
 - [運転免許証の画像が流出したら?なりすましを防ぐ5つの対処](/posts/menkyosho-gazou-ryuushutsu-taisho)
 - [個人情報流出から自分を守る7つの予防策](/posts/kojin-joho-ryuushutsu-kojin-taisaku)
+- [使っていないアカウントの探し方と退会の手順](/posts/furui-account-sagashikata-taikai)
+- [メールアドレスの使い分け方](/posts/mail-address-tsukaiwake)
+- [二段階認証はSMS・認証アプリ・パスキーのどれがいい?](/posts/nidan-ninsho-sms-app-passkey-hikaku)
 - [個人情報を漏らさないための点検リスト(組織向け)](/posts/kojin-joho-ryuushutsu-kigyo-tenken)
 
 ### 関連する用語
 
 - [リスト型攻撃(クレデンシャルスタッフィング)とは](/posts/credential-stuffing-toha)
+- [ハッシュ化されたパスワードが流出したら](/posts/hash-password-ryuushutsu-toha)
 - [サプライチェーン攻撃とは](/posts/supply-chain-attack-toha)
 - [SQLインジェクションとは](/posts/sql-injection-toha)
 - [Webシェルとは](/posts/web-shell-toha)
