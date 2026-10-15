@@ -135,3 +135,5 @@ APIを**提供する側**になる時も、同じ視点が重要です。**制�
 - 提供する側でも、**制限を設ける**
 
 APIの基本は、[APIとは](/posts/api-toha)、APIキーの扱いは、[APIキーとは](/posts/api-key-toha)をご覧ください。
+
+関連記事:[APIのタイムアウトとリトライの決め方](/posts/api-timeout-retry-kimekata)、[冪等キー(Idempotency-Key)とは](/posts/idempotency-key-jissou)

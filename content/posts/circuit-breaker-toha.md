@@ -62,3 +62,5 @@ faq:
 - [サーキット ブレーカー パターン - Azure Architecture Center](https://learn.microsoft.com/ja-jp/azure/architecture/patterns/circuit-breaker)
 
 ※ 具体的な実装方法は使用しているフレームワークやライブラリによって異なるため、詳しくは各公式ドキュメントもあわせてご確認ください。
+
+関連記事:[APIのタイムアウトとリトライの決め方](/posts/api-timeout-retry-kimekata)、[冪等キー(Idempotency-Key)とは](/posts/idempotency-key-jissou)

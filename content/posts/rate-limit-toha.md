@@ -56,3 +56,5 @@ faq:
 レートリミットは、限られたサーバーの処理能力を、すべての利用者に公平に、かつ安全に届けるための「アクセス回数の整理券」のような仕組みです。エラーに遭遇した際は、慌てずに少し時間を置いてから再度試してみましょう。
 
 関連記事:[APIをループで呼ぶ時の3つの約束](/posts/api-loop-seigen-taisaku)
+
+関連記事:[APIのタイムアウトとリトライの決め方](/posts/api-timeout-retry-kimekata)、[冪等キー(Idempotency-Key)とは](/posts/idempotency-key-jissou)

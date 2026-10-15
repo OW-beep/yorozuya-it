@@ -63,3 +63,5 @@ APIは難しい専門用語に聞こえますが、実態は「サービス同�
 関連記事:[APIをループで呼ぶ時の3つの約束](/posts/api-loop-seigen-taisaku)
 
 関連記事:[なぜ今、個人情報の流出が相次いでいるのか(2026年10月)](/posts/kojin-joho-ryuushutsu-naze-ima-takihatsu)
+
+関連記事:[APIのタイムアウトとリトライの決め方](/posts/api-timeout-retry-kimekata)、[冪等キー(Idempotency-Key)とは](/posts/idempotency-key-jissou)
