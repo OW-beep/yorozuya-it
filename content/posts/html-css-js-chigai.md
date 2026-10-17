@@ -2,8 +2,8 @@
 title: "HTMLとCSSとJavaScriptの違い|役割を家づくりと実例で比べる"
 category: "プログラミング"
 date: "2026-05-13"
-updated: "2026-10-15"
-excerpt: "Web制作の3点セット、実は家づくりに例えるとすっきり理解できます。"
+updated: "2026-10-17"
+excerpt: "HTML・CSS・JavaScriptの違いを、家づくりに例えて解説。「HTMLとJavaScriptの違い」「3つの役割分担」が、この1本で整理できます。"
 tldr:
   - "HTMLは骨組み、CSSは見た目、JavaScriptは動きを担当する"
   - "3つは役割分担しており、どれか1つだけでは今のWebページは作れない"

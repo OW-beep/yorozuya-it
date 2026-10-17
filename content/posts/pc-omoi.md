@@ -50,3 +50,5 @@ affiliate:
 「重い」と感じたら、まずは①〜④の無料でできる対策から試してみてください。それでも改善しない場合に、初めてメモリ増設やパソコンの買い替えを検討するのがおすすめです。
 
 関連記事:[パソコンの調子がおかしい時の切り分け手順](/posts/pc-choshi-okashii-kirisake)
+
+関連記事:[メモリとストレージの違い](/posts/memory-storage-chigai)/[SSDとHDDの違い](/posts/ssd-hdd-chigai)

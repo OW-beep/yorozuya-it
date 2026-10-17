@@ -58,3 +58,5 @@ faq:
 関連記事:[APIをループで呼ぶ時の3つの約束](/posts/api-loop-seigen-taisaku)
 
 関連記事:[APIのタイムアウトとリトライの決め方](/posts/api-timeout-retry-kimekata)、[冪等キー(Idempotency-Key)とは](/posts/idempotency-key-jissou)
+
+関連記事:[HTTPステータスコードとは](/posts/http-status-code-toha)

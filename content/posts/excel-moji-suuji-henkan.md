@@ -121,3 +121,5 @@ Excelの式をAIに相談する時も、同じです。式が正しくても、�
 - 作業前に、**元のファイルをコピー**しておく
 
 Excelでよくつまずく点は、[Excel初心者がよくつまずくポイント](/posts/excel-beginner-tsumazuki)でも解説しています。
+
+関連記事:[文字化けの直し方](/posts/mojibake-naoshikata)

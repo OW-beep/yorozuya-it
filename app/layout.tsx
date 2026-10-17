@@ -54,6 +54,9 @@ export const metadata: Metadata = {
   verification: {
     google: "KYZp6leIoJkmXQipodIUtUhXTopgEfgqFiQ7eJZuRZA",
   },
+  other: {
+    "google-adsense-account": "ca-pub-4630812027939211",
+  },
   alternates: {
     types: {
       "application/rss+xml": `${SITE_URL}/feed.xml`,

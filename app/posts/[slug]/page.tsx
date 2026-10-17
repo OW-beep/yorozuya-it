@@ -13,6 +13,7 @@ import PostFooterNav from "@/components/PostFooterNav";
 import AffiliateBanner from "@/components/AffiliateBanner";
 import ConsultCta from "@/components/ConsultCta";
 import SeriesBox from "@/components/SeriesBox";
+import AdUnit from "@/components/AdUnit";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -144,6 +145,8 @@ export default async function PostPage({
       {post!.affiliate && <AffiliateBanner item={post!.affiliate} />}
 
       <ShareButtons slug={post!.slug} title={post!.title} />
+
+      <AdUnit slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE} />
 
       <FaqSection items={post!.faq} />
 
