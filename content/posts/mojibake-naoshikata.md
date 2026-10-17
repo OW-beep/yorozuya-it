@@ -1,7 +1,7 @@
 ---
 title: "文字化けの原因と直し方|Excel・CSV・メール・Webページ別の対処法"
 category: "PC・スマホ"
-date: "2026-10-17"
+date: "2026-10-03"
 excerpt: "「縺薙ｓ縺ｫ縺｡縺ｯ」のような文字化けは、文字コードのずれが原因。ExcelのCSV、メール、Webページ、ZIPファイル名など、場面別の直し方をまとめました。"
 featured: false
 tldr:
